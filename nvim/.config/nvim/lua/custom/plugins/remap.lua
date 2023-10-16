@@ -1,0 +1,60 @@
+return {
+  -- Bring up netrw
+  vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>"),
+
+  -- Buffer navigation
+  vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = '[B]uffer [N]ext' }),
+  vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = '[B]uffer [P]revious' }),
+
+  -- Visual mode move highlighted text
+  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = 'Move Line Down' }),
+  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move Line Up' }),
+
+  -- append line below to current line, keep cursor at current location
+  vim.keymap.set("n", "J", "mzJ`z", { desc = 'Append line below to current line' }),
+
+  -- page up/down keeps cursor in middle of page
+  vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = 'Page Down' }),
+  vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = 'Page Up' }),
+
+  -- when searching for terms, keep cursor in middle of terminal
+  vim.keymap.set("n", "n", "nzzzv", { desc = 'Next term' }),
+  vim.keymap.set("n", "N", "Nzzzv", { desc = 'Previous term' }),
+
+  -- when pasting over via highligh, keep current pasted item in memory
+  vim.keymap.set("x", "p", [["_dP]], { desc = '' }),
+
+  -- yank into system clipboard (i.e. outside current vim session)
+  -- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+  -- vim.keymap.set("n", "<leader>Y", [["+Y]])
+  -- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+  -- I've been told Q is the worst place in the universe
+  vim.keymap.set("n", "Q", "<nop>"),
+
+  -- Plenary Test remap
+  vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile"),
+
+  -- Increment all numbers in visual selection
+  vim.keymap.set("v", "<leader>vi", ':s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv', { desc = "[I]ncrement Numbers" }),
+  -- Decrement all numbers in visual selection
+  vim.keymap.set("v", "<leader>vd", ':s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv', { desc = "[D]ecrement Numbers" }),
+  -- Set up sed command on current word
+  -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+  -- Make current file executable
+  -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+  -- double tap space to source file
+  -- vim.keymap.set("n", "<leader><leader>", function()
+  --   vim.cmd("so")
+  -- end)
+
+  -- This will use lsp to format the current file
+  -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+  require('which-key').register({
+    ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+  })
+
+}
