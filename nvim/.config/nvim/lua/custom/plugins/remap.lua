@@ -33,7 +33,7 @@ return {
   vim.keymap.set("n", "Q", "<nop>"),
 
   -- Plenary Test remap
-  vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile"),
+  vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile", { desc = "[P]lenary [T]est" }),
 
   -- Increment all numbers in visual selection
   vim.keymap.set("v", "<leader>vi", ':s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv', { desc = "[I]ncrement Numbers" }),
@@ -43,16 +43,12 @@ return {
   -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
   -- Make current file executable
-  -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+  vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make e[X]ecutable" }),
 
-  -- double tap space to source file
-  -- vim.keymap.set("n", "<leader><leader>", function()
-  --   vim.cmd("so")
-  -- end)
+  -- Run tmux-sessionizer from within nvim
+  vim.keymap.set("n", "<C-s>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "tmux-sessionizer" }),
 
-  -- This will use lsp to format the current file
-  -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
+  -- Register two key keymap titles
   require('which-key').register({
     ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
   })

@@ -1,7 +1,2 @@
 # Local configuration files
-*.local
-.vim/.config/nvim/plugin/packer_compiled.lua
-.vim/.config/packer/**
-nvim/plugin/packer_compiled.lua
-nvim/nvim
 *backup
