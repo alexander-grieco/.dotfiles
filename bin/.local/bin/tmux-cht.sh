@@ -11,5 +11,5 @@ if grep -qs "$selected" ~/.tmux-cht-languages; then
     query=`echo $query | tr ' ' '+'`
     tmux split-window -p 35 -v -b bash -c "echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
 else
-    tmux split-window -p 35 -v -b bash -c "curl -s cht.sh/$selected~$query | less"
+    tmux split-window -p 35 -v -b bash -c "curl -s cht.sh/$selected~$query | less -R"
 fi
