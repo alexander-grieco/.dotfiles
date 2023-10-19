@@ -1,5 +1,5 @@
 # Tasty bind-key for tmux-sessionizer
-bindkey -s ^v "tmux-sessionizer\n"
+bindkey -s ^f "tmux-sessionizer\n"
 
 if [[ $_distro == "macos" ]]; then
   alias ls="gls --color --group-directories-first"
