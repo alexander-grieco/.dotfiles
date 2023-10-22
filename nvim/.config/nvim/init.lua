@@ -1,4 +1,5 @@
 require "alex.globals"
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -170,6 +171,12 @@ require('lazy').setup({
           return vim.fn.executable 'make' == 1
         end,
       },
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        -- This will not install any breaking changes.
+        -- For major updates, this must be adjusted manually.
+        version = "^1.0.0",
+      },
     },
   },
 
@@ -270,6 +277,7 @@ require('telescope').setup {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
+        ['<C-q>'] = require('telescope.actions').send_selected_to_qflist + require('telescope.actions').open_qflist,
       },
     },
     vimgrep_arguments = {
@@ -294,8 +302,8 @@ require('telescope').setup {
       -- define mappings, e.g.
       mappings = {         -- extend mappings
         i = {
-          ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
-          ["<C-i>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " }),
+          -- ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
+          ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " }),
         },
       },
     }
@@ -427,7 +435,7 @@ local on_attach = function(_, bufnr)
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  nmap('<C-l>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')

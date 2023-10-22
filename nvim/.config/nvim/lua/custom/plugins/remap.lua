@@ -23,11 +23,10 @@ return {
 
   -- when pasting over via highligh, keep current pasted item in memory
   vim.keymap.set("x", "p", [["_dP]], { desc = '' }),
+  -- vim.keymap.set({ "n", "v" }, "<leader>dd", [["_d]]),
 
-  -- yank into system clipboard (i.e. outside current vim session)
-  -- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-  -- vim.keymap.set("n", "<leader>Y", [["+Y]])
-  -- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+  -- Copy full file (remain at same place in file)
+  vim.keymap.set("n", "<leader>Y", "gg\"+yG<C-o>", { desc = "Full file copy" }),
 
   -- I've been told Q is the worst place in the universe
   vim.keymap.set("n", "Q", "<nop>"),
@@ -39,14 +38,23 @@ return {
   vim.keymap.set("v", "<leader>vi", ':s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv', { desc = "[I]ncrement Numbers" }),
   -- Decrement all numbers in visual selection
   vim.keymap.set("v", "<leader>vd", ':s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv', { desc = "[D]ecrement Numbers" }),
+
   -- Set up sed command on current word
-  -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+  vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Replace current word" }),
 
   -- Make current file executable
   vim.keymap.set("n", "<leader>x", "<cmd>silent !chmod +x %<CR>", { silent = true, desc = "Make e[X]ecutable" }),
 
   -- Run tmux-sessionizer from within nvim
-  vim.keymap.set("n", "<C-s>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "tmux-sessionizer" }),
+  vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "tmux-sessionizer" }),
+
+  -- Quickfix remaps
+  vim.keymap.set("n", "<C-j>", ":cnext<CR>", { desc = "quickfix list next" }),
+  vim.keymap.set("n", "<C-k>", ":cprev<CR>", { desc = "quickfix list prev" }),
+  vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "quickfix list open" }),
+  vim.keymap.set("n", "<leader>cc", ":cclose<CR>", { desc = "quickfix list close" }),
+  vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'r')<CR>", { desc = "quickfix list clear" }),
 
   -- Register two key keymap titles
   require('which-key').register({
