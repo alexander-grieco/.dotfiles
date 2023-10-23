@@ -23,7 +23,9 @@ return {
 
   -- when pasting over via highligh, keep current pasted item in memory
   vim.keymap.set("x", "p", [["_dP]], { desc = '' }),
-  -- vim.keymap.set({ "n", "v" }, "<leader>dd", [["_d]]),
+  vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]]),
+  -- yank to global clipboard
+  vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]),
 
   -- Copy full file (remain at same place in file)
   vim.keymap.set("n", "<leader>Y", "gg\"+yG<C-o>", { desc = "Full file copy" }),
