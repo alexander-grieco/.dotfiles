@@ -55,7 +55,7 @@ return {
   vim.keymap.set("n", "<C-j>", ":cnext<CR>", { desc = "quickfix list next" }),
   vim.keymap.set("n", "<C-k>", ":cprev<CR>", { desc = "quickfix list prev" }),
   vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "quickfix list open" }),
-  vim.keymap.set("n", "<leader>cc", ":cclose<CR>", { desc = "quickfix list close" }),
+  vim.keymap.set("n", "<leader>cc", ":copen<CR>:q!<CR>", { desc = "quickfix list close" }),
   vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'r')<CR>", { desc = "quickfix list clear" }),
 
   -- Register two key keymap titles
