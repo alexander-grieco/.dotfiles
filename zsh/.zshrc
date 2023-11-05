@@ -1,4 +1,5 @@
 # . /usr/local/opt/asdf/asdf.sh
+export STARSHIP_CONFIG=~/starship.toml
 eval "$(starship init zsh)"
 
 [[ -f ~/.zsh/downloads.zsh ]] && source ~/.zsh/downloads.zsh

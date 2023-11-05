@@ -12,3 +12,6 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 [package]
 disabled = true
 
+# Don't show the 'took' which displays the duration of a command
+[cmd_duration]
+disabled = true
