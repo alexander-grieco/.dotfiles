@@ -37,9 +37,11 @@ return {
   vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile", { desc = "[P]lenary [T]est" }),
 
   -- Increment all numbers in visual selection
-  vim.keymap.set("v", "<leader>vi", ':s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv', { desc = "[I]ncrement Numbers" }),
+  vim.keymap.set("v", "<leader>vi", ':s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv',
+    { desc = "[I]ncrement Numbers, or <C-a>" }),
   -- Decrement all numbers in visual selection
-  vim.keymap.set("v", "<leader>vd", ':s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv', { desc = "[D]ecrement Numbers" }),
+  vim.keymap.set("v", "<leader>vd", ':s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv',
+    { desc = "[D]ecrement Numbers, or <C-x>" }),
 
   -- Set up sed command on current word
   vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
