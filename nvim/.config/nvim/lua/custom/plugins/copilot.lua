@@ -1,16 +1,14 @@
 return {
-  'github/copilot.vim',
-  keys = {
-    {
-      "<leader>ci",
-      'copilot#Accept("<CR>")',
-      desc = "Accept copilot suggestion"
-    },
-    {
-      "<leader>cp",
-      ':Copilot<CR>',
-      desc = "Call Copilot",
-    }
-  },
 
+  "zbirenbaum/copilot-cmp",
+  dependencies = {
+    "zbirenbaum/copilot.lua",
+  },
+  config = function()
+    require("copilot").setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+    require("copilot_cmp").setup()
+  end
 }

@@ -485,6 +485,8 @@ local servers = {
   pyright = {},
   rust_analyzer = {},
   tsserver = {},
+  tflint = {},
+  terraformls = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
@@ -564,6 +566,7 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
+    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
