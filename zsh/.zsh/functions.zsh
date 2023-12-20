@@ -9,3 +9,12 @@ function code {
     fi
 }
 
+function gmr {
+    #branch=$(git remote show origin | grep 'HEAD branch' | cut -d':' -f2 | tr -d ' ')
+    git checkout main
+    git pull origin main
+    if [ $# != 0 ]
+    then
+        git checkout -b "$1"
+    fi
+}
