@@ -63,4 +63,6 @@ email = awgrieco@gmail.com
 	colorMoved = zebra
 [core]
   pager = less --RAW-CONTROL-CHARS
+[alias]
+	commit = commit -S
 
