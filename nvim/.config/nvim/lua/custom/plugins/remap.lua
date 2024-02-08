@@ -60,6 +60,9 @@ return {
   vim.keymap.set("n", "<leader>cc", ":copen<CR>:q!<CR>", { desc = "quickfix list close" }),
   vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'r')<CR>", { desc = "quickfix list clear" }),
 
+  -- Format json
+  vim.keymap.set("n", "<leader>fj", ":%!jq '.'<CR>", { desc = "format json file" }),
+
   -- Register two key keymap titles
   require('which-key').register({
     ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
