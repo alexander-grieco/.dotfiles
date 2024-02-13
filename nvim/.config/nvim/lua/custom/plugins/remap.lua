@@ -59,6 +59,9 @@ return {
   vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "quickfix list open" }),
   vim.keymap.set("n", "<leader>cc", ":copen<CR>:q!<CR>", { desc = "quickfix list close" }),
   vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'r')<CR>", { desc = "quickfix list clear" }),
+  vim.keymap.set("n", "<leader>fr", ":cdo %s@@@g<Left><Left><Left>", { desc = "Find and replace (in quickfixlist)" }),
+  vim.keymap.set("n", "<leader>fwr", [[:cdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Find current word and replace (in quickfixlist)" }),
 
   -- Format json
   vim.keymap.set("n", "<leader>fj", ":%!jq '.'<CR>", { desc = "format json file" }),
@@ -66,6 +69,8 @@ return {
   -- Register two key keymap titles
   require('which-key').register({
     ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
+    ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
+    ['<leader>fw'] = { name = '[F]ind word', _ = 'which_key_ignore' },
   })
 
 }
