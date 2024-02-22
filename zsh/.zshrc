@@ -4,6 +4,7 @@ eval "$(starship init zsh)"
 
 [[ -f ~/.zsh/downloads.zsh ]] && source ~/.zsh/downloads.zsh
 [[ -f ~/.zsh/exports.zsh ]] && source ~/.zsh/exports.zsh
+[[ -f ~/.zsh/export-secret.zsh ]] && source ~/.zsh/export-secret.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
 [[ -f ~/.zsh/znap.zsh ]] && source ~/.zsh/znap.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
