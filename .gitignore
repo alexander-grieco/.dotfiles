@@ -2,3 +2,6 @@
 *backup
 
 **export-secret**
+
+# Ignore lua lock file
+**lazy-lock.json
