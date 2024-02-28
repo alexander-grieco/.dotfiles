@@ -321,6 +321,12 @@ require('lazy').setup {
       --  If you already have a Nerd Font, or terminal set up with fallback fonts
       --  you can enable this
       -- { 'nvim-tree/nvim-web-devicons' }
+      {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        -- This will not install any breaking changes.
+        -- For major updates, this must be adjusted manually.
+        version = "^1.0.0",
+      },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -354,9 +360,47 @@ require('lazy').setup {
         --   },
         -- },
         -- pickers = {}
-        extensions = {
-          ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+        defaults = {
+          file_ignore_patterns = {
+            "^.git/*",
+          },
+          mappings = {
+            i = {
+              ['<C-u>'] = false,
+              ['<C-d>'] = false,
+              ['<C-q>'] = require('telescope.actions').add_to_qflist + require('telescope.actions').open_qflist,
+              ['<C-w>'] = require('telescope.actions').add_selected_to_qflist + require('telescope.actions').open_qflist,
+            },
+          },
+          vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+          },
+          extensions = {
+            ['ui-select'] = {
+              require('telescope.themes').get_dropdown(),
+            },
+            live_grep_args = {
+              auto_quoting = true, -- enable/disable auto-quoting
+              -- define mappings, e.g.
+              mappings = {         -- extend mappings
+                i = {
+                  -- ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
+                  ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " }),
+                },
+              },
+            }
+          },
+        },
+        pickers = {
+          find_files = {
+            hidden = true
           },
         },
       }
