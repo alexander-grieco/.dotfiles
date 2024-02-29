@@ -1,4 +1,4 @@
-require "alex.globals"
+require 'alex.globals'
 
 --[[
 
@@ -237,7 +237,7 @@ require('lazy').setup {
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',    opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following lua:
@@ -272,7 +272,7 @@ require('lazy').setup {
   -- after the plugin has been loaded:
   --  config = function() ... end
 
-  {                     -- Useful plugin to show you pending keybinds.
+  { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VeryLazy', -- Sets the loading event to 'VeryLazy'
     config = function() -- This is the function that runs, AFTER loading
@@ -322,10 +322,10 @@ require('lazy').setup {
       --  you can enable this
       -- { 'nvim-tree/nvim-web-devicons' }
       {
-        "nvim-telescope/telescope-live-grep-args.nvim",
+        'nvim-telescope/telescope-live-grep-args.nvim',
         -- This will not install any breaking changes.
         -- For major updates, this must be adjusted manually.
-        version = "^1.0.0",
+        version = '^1.0.0',
       },
     },
     config = function()
@@ -362,7 +362,7 @@ require('lazy').setup {
         -- pickers = {}
         defaults = {
           file_ignore_patterns = {
-            "^.git/*",
+            '^.git/*',
           },
           mappings = {
             i = {
@@ -373,14 +373,14 @@ require('lazy').setup {
             },
           },
           vimgrep_arguments = {
-            "rg",
-            "--color=never",
-            "--no-heading",
-            "--with-filename",
-            "--line-number",
-            "--column",
-            "--smart-case",
-            "--hidden",
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '--hidden',
           },
           extensions = {
             ['ui-select'] = {
@@ -389,18 +389,18 @@ require('lazy').setup {
             live_grep_args = {
               auto_quoting = true, -- enable/disable auto-quoting
               -- define mappings, e.g.
-              mappings = {         -- extend mappings
+              mappings = { -- extend mappings
                 i = {
                   -- ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt(),
-                  ["<C-k>"] = require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " }),
+                  ['<C-k>'] = require('telescope-live-grep-args.actions').quote_prompt { postfix = ' --iglob ' },
                 },
               },
-            }
+            },
           },
         },
         pickers = {
           find_files = {
-            hidden = true
+            hidden = true,
           },
         },
       }
