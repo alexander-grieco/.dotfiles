@@ -4,6 +4,8 @@
 	name = Alex Grieco
 	email = awgrieco@gmail.com
 	signingkey = ~/.ssh/github_ed25519.pub
+[checkout]
+	defaultBare = false
 [color "status"]
 	branch = normal
 	added = 10 normal
