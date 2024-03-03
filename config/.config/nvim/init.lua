@@ -299,20 +299,20 @@ require('lazy').setup {
         map('n', '<leader>hu', gs.undo_stage_hunk, { desc = 'undo stage hunk' })
         map('n', '<leader>hR', gs.reset_buffer, { desc = 'git Reset buffer' })
         map('n', '<leader>hp', gs.preview_hunk, { desc = 'preview git hunk' })
-        map('n', '<leader>hb', function()
+        map('n', '<leader>hab', function()
           gs.blame_line { full = false }
         end, { desc = 'git blame line' })
-        map('n', '<leader>hd', gs.diffthis, { desc = 'git diff against index' })
+        map('n', '<leader>had', gs.diffthis, { desc = 'git diff against index' })
         map('n', '<leader>hD', function()
           gs.diffthis '~'
         end, { desc = 'git diff against last commit' })
 
         -- Toggles
-        map('n', '<leader>tb', gs.toggle_current_line_blame, { desc = 'toggle git blame line' })
-        map('n', '<leader>td', gs.toggle_deleted, { desc = 'toggle git show deleted' })
+        map('n', '<leader>hb', gs.toggle_current_line_blame, { desc = 'toggle git blame line' })
+        map('n', '<leader>hd', gs.toggle_deleted, { desc = 'toggle git show deleted' })
 
         -- Text object
-        map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })
+        map({ 'o', 'x' }, 'hi', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })
       end,
     },
   },
@@ -340,11 +340,11 @@ require('lazy').setup {
 
       -- Document existing key chains
       require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>h'] = { name = 'Gitsigns Functions', _ = 'which_key_ignore' },
       }
     end,
   },

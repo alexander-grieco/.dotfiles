@@ -43,11 +43,14 @@ return {
       desc = 'Toggle trouble loclist',
     },
     {
-      '<leader>gR',
+      '<leader>xR',
       function()
         require('trouble').toggle 'lsp_references'
       end,
       desc = 'Toggle trouble lsp_references',
     },
+  },
+  require('which-key').register {
+    ['<leader>x'] = { name = 'Trouble Operations', _ = 'which_key_ignore' },
   },
 }

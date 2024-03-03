@@ -1,14 +1,16 @@
 return {
 
-  "zbirenbaum/copilot-cmp",
+  'zbirenbaum/copilot-cmp',
   dependencies = {
-    "zbirenbaum/copilot.lua",
+    'zbirenbaum/copilot.lua',
   },
   config = function()
-    require("copilot").setup({
+    require('copilot').setup {
       suggestion = { enabled = false },
       panel = { enabled = false },
-    })
-    require("copilot_cmp").setup()
-  end
+    }
+    require('copilot_cmp').setup {
+      fix_pairs = true,
+    }
+  end,
 }
