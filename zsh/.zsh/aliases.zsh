@@ -18,6 +18,7 @@ alias ddd="cd $HOME/dapper"
 # Vim
 alias vim="nvim"
 alias vvb="cd ~/.config/nvim && vim ."
+alias v="nvim"
 
 # Git
 alias gm="git checkout main && git pull origin main --rebase"
