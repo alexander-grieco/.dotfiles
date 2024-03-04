@@ -99,7 +99,11 @@ return { -- LSP Configuration & Plugins
       rust_analyzer = {},
       tsserver = {},
       tflint = {},
-      terraformls = {},
+      terraformls = {
+        init_options = {
+          ignoreSingleFileWarning = false,
+        },
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
