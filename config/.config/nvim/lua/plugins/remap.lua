@@ -63,12 +63,4 @@ return {
 
   -- Close all but current buffer
   vim.keymap.set('n', '<leader>o', ':only<CR>', { desc = 'Close all but current buffer' }),
-
-  -- Register two key keymap titles
-  require('which-key').register {
-    ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
-    ['<leader>o'] = { name = '[O]nly current buffer' },
-    ['<leader>l'] = { name = '[L]oclist Operations', _ = 'which_key_ignore' },
-    ['<leader>c'] = { name = 'Qui[C]kfix Operations', _ = 'which_key_ignore' },
-  },
 }

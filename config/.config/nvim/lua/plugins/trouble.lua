@@ -1,6 +1,8 @@
 return {
   'folke/trouble.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   opts = {
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -49,8 +51,5 @@ return {
       end,
       desc = 'Toggle trouble lsp_references',
     },
-  },
-  require('which-key').register {
-    ['<leader>x'] = { name = 'Trouble Operations', _ = 'which_key_ignore' },
   },
 }
