@@ -101,7 +101,15 @@ return { -- LSP Configuration & Plugins
       tflint = {},
       terraformls = {
         init_options = {
+          -- needed when .terraform is not in root of repo you are opening?
+          -- it just helps avoid an error message and with terraformls not attaching
           ignoreSingleFileWarning = false,
+          experimentalFeatures = {
+            prefillRequiredFields = true,
+          },
+          validation = {
+            enableEnhancedValidation = true,
+          },
         },
       },
       lua_ls = {

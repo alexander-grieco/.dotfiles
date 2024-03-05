@@ -38,3 +38,7 @@ alias tf="terraform"
 
 # GCP
 alias gcc="gcloud container clusters"
+
+# Dapper Specific
+alias ips="kubectl port-forward svc/gips 8080:8080"
+alias cips="curl http://localhost:8080/api/v1/projects"
