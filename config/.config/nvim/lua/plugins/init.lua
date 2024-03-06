@@ -7,15 +7,32 @@ return {
 
   { -- Autoformat
     'stevearc/conform.nvim',
+    event = { 'BufWritePre' },
+    cmd = { 'ConformInfo' },
     opts = {
       notify_on_error = false,
       format_on_save = {
         timeout_ms = 500,
         lsp_fallback = true,
       },
+      formatters = {
+        -- Custom formatter for HCL config files
+        hcl_fmt = {
+          command = 'nomad',
+          args = { 'fmt', '-recursive', '-list=false', '.' },
+          stdin = false,
+        },
+      },
       formatters_by_ft = {
         lua = { 'stylua' },
         terraform = { 'terraform_fmt' },
+        yaml = { 'yq' },
+        json = { 'jq' },
+        toml = { 'taplo' },
+        hcl = { 'hcl_fmt' },
+        rust = { 'rustfmt' },
+        nomad = { 'nomad_fmt' },
+        go = { 'gofmt', 'goimports' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -24,6 +41,10 @@ return {
         -- javascript = { { "prettierd", "prettier" } },
       },
     },
+    init = function()
+      -- If you want the formatexpr, here is the place to set it
+      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+    end,
   },
 
   -- Highlight todo, notes, etc in comments

@@ -99,6 +99,9 @@ return { -- LSP Configuration & Plugins
       rust_analyzer = {},
       tsserver = {},
       tflint = {},
+      jqls = {},
+      taplo = {},
+      yamlls = {},
       terraformls = {
         init_options = {
           -- needed when .terraform is not in root of repo you are opening?
