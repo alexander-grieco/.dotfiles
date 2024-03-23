@@ -11,8 +11,9 @@ return {
     cmd = { 'ConformInfo' },
     opts = {
       notify_on_error = false,
+      async = true,
       format_on_save = {
-        timeout_ms = 500,
+        timeout_ms = 2000,
         lsp_fallback = true,
       },
       formatters = {
