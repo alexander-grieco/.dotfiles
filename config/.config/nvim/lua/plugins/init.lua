@@ -34,6 +34,8 @@ return {
         rust = { 'rustfmt' },
         nomad = { 'nomad_fmt' },
         go = { 'gofmt', 'goimports' },
+        javascript = { 'prettierd', 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

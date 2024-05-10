@@ -97,6 +97,10 @@ return { -- LSP Configuration & Plugins
       gopls = {},
       pyright = {},
       rust_analyzer = {},
+      prettier = {
+        bin = 'prettierd',
+        filetypes = { 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'css', 'scss', 'json', 'yaml', 'markdown' },
+      },
       tsserver = {},
       tflint = {},
       jqls = {},
