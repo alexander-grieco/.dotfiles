@@ -5,3 +5,7 @@
 
 # Ignore lua lock file
 **lazy-lock.json
+
+# Ignore zinit things
+**.zwc
+**webi
