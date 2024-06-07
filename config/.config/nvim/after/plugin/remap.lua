@@ -1,5 +1,5 @@
 -- Bring up netrw
-vim.keymap.set('n', '<leader>pv', '<cmd>Ex<CR>')
+vim.keymap.set('n', '<leader>pv', '<cmd>Oil<CR>')
 
 -- Buffer navigation
 vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = '[B]uffer [N]ext' })
