@@ -19,6 +19,10 @@ function gmr {
     fi
 }
 
+function ksh {
+    kubectl get secret "$1" --show-managed-fields -o jsonpath='{range .metadata.managedFields[*]}{.manager}{" did "}{.operation}{" at "}{.time}{"\n"}{end}'
+}
+
 # # I want to use this, but it doesn't work with autocomplete
 # function kubectl_prompt() {
 #     # Check if the command is being called for autocompletion
