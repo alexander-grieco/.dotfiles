@@ -20,6 +20,9 @@ alias vim="nvim"
 alias vvb="cd ~/.config/nvim && vim ."
 alias v="nvim"
 
+# SSH
+alias sshq="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
 # Git
 alias gm="git checkout main && git pull origin main --rebase"
 alias gbr="git branch | grep -v \"main\" | xargs git branch -D"

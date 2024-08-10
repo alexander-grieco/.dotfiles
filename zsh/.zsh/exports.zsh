@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/bin:${KREW_ROOT:-$HOME/.krew}/bin:/usr/local/opt/asdf/bin:~/go/bin:$HOME/google-cloud-sdk/bin:$PATH
 
+# Kubernetes
+export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/k3s-config
 
 #### GIT ####
 if [ -f ~/.ssh/github_ed25519 ]
