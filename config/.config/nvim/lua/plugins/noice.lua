@@ -1,29 +1,29 @@
 return {
-  'folke/noice.nvim',
-  event = 'VeryLazy',
+  "folke/noice.nvim",
+  event = "VeryLazy",
   opts = {
     lsp = {
       override = {
-        ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
-        ['vim.lsp.util.stylize_markdown'] = true,
-        ['cmp.entry.get_documentation'] = true,
+        ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+        ["vim.lsp.util.stylize_markdown"] = true,
+        ["cmp.entry.get_documentation"] = true,
       },
     },
     routes = {
       {
         filter = {
-          event = 'msg_show',
+          event = "msg_show",
           any = {
-            { find = '%d+L, %d+B' },
-            { find = '; after #%d+' },
-            { find = '; before #%d+' },
+            { find = "%d+L, %d+B" },
+            { find = "; after #%d+" },
+            { find = "; before #%d+" },
           },
         },
-        view = 'mini',
+        view = "mini",
       },
       {
-        view = 'notify',
-        filter = { event = 'msg_showmode' },
+        view = "notify",
+        filter = { event = "msg_showmode" },
       },
     },
     presets = {
@@ -36,29 +36,29 @@ return {
       cmdline_popup = {
         position = {
           row = 5,
-          col = '50%',
+          col = "50%",
         },
         size = {
           width = 60,
-          height = 'auto',
+          height = "auto",
         },
       },
       popupmenu = {
-        relative = 'editor',
+        relative = "editor",
         position = {
           row = 8,
-          col = '50%',
+          col = "50%",
         },
         size = {
           width = 60,
           height = 10,
         },
         border = {
-          style = 'rounded',
+          style = "rounded",
           padding = { 0, 1 },
         },
         win_options = {
-          winhighlight = { Normal = 'Normal', FloatBorder = 'DiagnosticInfo' },
+          winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
         },
       },
     },
@@ -75,10 +75,10 @@ return {
   },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    'MunifTanjim/nui.nvim',
+    "MunifTanjim/nui.nvim",
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    'rcarriga/nvim-notify',
+    "rcarriga/nvim-notify",
   },
 }

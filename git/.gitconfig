@@ -70,3 +70,13 @@
 	gpgsign = true
 [gpg]
 	format = ssh
+[maintenance]
+	repo = /Users/alexgrieco/.utils/zsh-snap
+	repo = /Users/alexgrieco/.utils/catppuccin/iterm
+	repo = /Users/alexgrieco/.utils/marlonrichert/zcolors
+	repo = /Users/alexgrieco/.utils/marlonrichert/zsh-autocomplete
+	repo = /Users/alexgrieco/.utils/marlonrichert/zsh-edit
+	repo = /Users/alexgrieco/.utils/marlonrichert/zsh-hist
+	repo = /Users/alexgrieco/.utils/trapd00r/LS_COLORS
+	repo = /Users/alexgrieco/.utils/zsh-users/zsh-autosuggestions
+	repo = /Users/alexgrieco/.utils/zsh-users/zsh-syntax-highlighting

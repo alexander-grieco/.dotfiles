@@ -14,24 +14,24 @@
 --  config = function() ... end
 
 return { -- Useful plugin to show you pending keybinds.
-  'folke/which-key.nvim',
-  event = 'VimEnter', -- Sets the loading event to 'VeryEnter'
+  "folke/which-key.nvim",
+  event = "VimEnter", -- Sets the loading event to 'VeryEnter'
   priority = 800,
   config = function() -- This is the function that runs, AFTER loading
-    require('which-key').setup()
+    require("which-key").setup()
 
     -- Document existing key chains
-    require('which-key').register {
-      ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-      ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-      ['<leader>h'] = { name = 'Gitsigns Functions', _ = 'which_key_ignore' },
-      ['<leader>b'] = { name = '[B]uffer', _ = 'which_key_ignore' },
-      ['<leader>o'] = { name = '[O]nly current buffer' },
-      ['<leader>l'] = { name = '[L]oclist Operations', _ = 'which_key_ignore' },
-      ['<leader>c'] = { name = 'Qui[C]kfix Operations', _ = 'which_key_ignore' },
-      ['<leader>x'] = { name = 'Trouble Operations', _ = 'which_key_ignore' },
+    require("which-key").add {
+      { "<leader>d", name = "[D]ocument" },
+      { "<leader>r", name = "[R]ename" },
+      { "<leader>s", name = "[S]earch" },
+      { "<leader>w", name = "[W]orkspace" },
+      { "<leader>h", name = "Gitsigns Functions" },
+      { "<leader>b", name = "[B]uffer" },
+      { "<leader>o", name = "[O]nly current buffer" },
+      { "<leader>l", name = "[L]oclist Operations" },
+      { "<leader>c", name = "Qui[C]kfix Operations" },
+      { "<leader>x", name = "Trouble Operations" },
     }
   end,
 }

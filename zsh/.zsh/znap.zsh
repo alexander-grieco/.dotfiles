@@ -1,10 +1,6 @@
-# The same goes for any other kind of custom prompt:
-znap eval starship 'starship init zsh --print-full-init'
-znap prompt
-
-# NOTE that `znap prompt` does not work with Powerlevel10k.
-# With that theme, you should use its "instant prompt" feature instead.
-
+# This doesn't seem to work....
+# znap eval starship 'starship init zsh --print-full-init'
+# znap prompt
 
 ##
 # Load your plugins with `znap source`.

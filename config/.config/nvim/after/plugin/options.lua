@@ -8,7 +8,7 @@ local options = {
   relativenumber = true,
 
   -- Enable mouse mode, can be useful for resizing splits for example!
-  mouse = 'a',
+  mouse = "a",
 
   -- Don't show the mode, since it's already in status line
   showmode = false,
@@ -16,7 +16,7 @@ local options = {
   -- Sync clipboard between OS and Neovim.
   --  Remove this option if you want your OS clipboard to remain independent.
   --  See `:help 'clipboard'`
-  clipboard = 'unnamedplus',
+  clipboard = "unnamedplus",
 
   -- Enable break indent
   breakindent = true,
@@ -29,7 +29,7 @@ local options = {
   smartcase = true,
 
   -- Keep signcolumn on by default
-  signcolumn = 'yes',
+  signcolumn = "yes",
 
   -- Decrease update time
   updatetime = 250,
@@ -43,10 +43,10 @@ local options = {
   --  See :help 'list'
   --  and :help 'listchars'
   list = true,
-  listchars = { tab = '» ', trail = '·', nbsp = '␣' },
+  listchars = { tab = "» ", trail = "·", nbsp = "␣" },
 
   -- Preview substitutions live, as you type!
-  inccommand = 'split',
+  inccommand = "split",
 
   -- Show which line your cursor is on
   cursorline = true,
@@ -55,7 +55,7 @@ local options = {
   scrolloff = 10,
 
   -- My settings
-  guicursor = '',
+  guicursor = "",
   tabstop = tab_len,
   softtabstop = tab_len,
   shiftwidth = tab_len,
@@ -80,4 +80,4 @@ end
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")

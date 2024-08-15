@@ -1,7 +1,7 @@
 return {
-  'folke/trouble.nvim',
+  "folke/trouble.nvim",
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    "nvim-tree/nvim-web-devicons",
   },
   opts = {
     -- your configuration comes here
@@ -10,46 +10,46 @@ return {
   },
   keys = {
     {
-      '<leader>xx',
+      "<leader>xx",
       function()
-        require('trouble').toggle()
+        require("trouble").toggle()
       end,
-      desc = 'Toggle trouble',
+      desc = "Toggle trouble",
     },
     {
-      '<leader>xw',
+      "<leader>xw",
       function()
-        require('trouble').toggle 'workspace_diagnostics'
+        require("trouble").toggle "workspace_diagnostics"
       end,
-      desc = 'Toggle trouble workspace diagnostics',
+      desc = "Toggle trouble workspace diagnostics",
     },
     {
-      '<leader>xd',
+      "<leader>xd",
       function()
-        require('trouble').toggle 'document_diagnostics'
+        require("trouble").toggle "document_diagnostics"
       end,
-      desc = 'Toggle trouble document diagnostics',
+      desc = "Toggle trouble document diagnostics",
     },
     {
-      '<leader>xq',
+      "<leader>xq",
       function()
-        require('trouble').toggle 'quickfix'
+        require("trouble").toggle "quickfix"
       end,
-      desc = 'Toggle trouble quickfix list',
+      desc = "Toggle trouble quickfix list",
     },
     {
-      '<leader>xl',
+      "<leader>xl",
       function()
-        require('trouble').toggle 'loclist'
+        require("trouble").toggle "loclist"
       end,
-      desc = 'Toggle trouble loclist',
+      desc = "Toggle trouble loclist",
     },
     {
-      '<leader>xR',
+      "<leader>xR",
       function()
-        require('trouble').toggle 'lsp_references'
+        require("trouble").toggle "lsp_references"
       end,
-      desc = 'Toggle trouble lsp_references',
+      desc = "Toggle trouble lsp_references",
     },
   },
 }
