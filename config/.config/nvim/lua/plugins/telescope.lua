@@ -71,7 +71,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
       -- pickers = {}
       defaults = {
         file_ignore_patterns = {
-          "^.git/*",
+          "^%.git%/.-",
         },
         mappings = {
           i = {
