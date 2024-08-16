@@ -85,9 +85,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
             ["<C-h>"] = "which_key",
             ["<C-q>"] = actions.add_to_qflist + actions.open_qflist,
             ["<C-w>"] = actions.add_selected_to_qflist + actions.open_qflist,
-            ["<C-i>"] = lga_actions.quote_prompt(),
-            ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
-            ["<C-t>"] = lga_actions.quote_prompt({ postfix = " -t" }),
+            -- ["<C-i>"] = lga_actions.quote_prompt(),
+            -- ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
           },
         },
         vimgrep_arguments = {
@@ -100,21 +99,22 @@ return { -- Fuzzy Finder (files, lsp, etc)
           "--smart-case",
           "--hidden",
         },
-        extensions = {
-          live_grep_args = {
-            auto_quoting = true, -- enable/disable auto-quoting
-            -- define mappings, e.g.
-            mappings = { -- extend mappings
-              i = {
-                ["<C-i>"] = lga_actions.quote_prompt(),
-                ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
-              },
+      },
+      extensions = {
+        live_grep_args = {
+          auto_quoting = true, -- enable/disable auto-quoting
+          -- define mappings, e.g.
+          mappings = { -- extend mappings
+            i = {
+              ["<C-i>"] = lga_actions.quote_prompt(),
+              ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+              ["<C-t>"] = lga_actions.quote_prompt({ postfix = " -t" }),
             },
-            -- ... also accepts theme settings, for example:
-            -- theme = "dropdown", -- use dropdown theme
-            -- theme = { }, -- use own theme spec
-            -- layout_config = { mirror=true }, -- mirror preview pane
           },
+          -- ... also accepts theme settings, for example:
+          -- theme = "dropdown", -- use dropdown theme
+          -- theme = { }, -- use own theme spec
+          -- layout_config = { mirror=true }, -- mirror preview pane
         },
       },
       pickers = {
