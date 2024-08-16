@@ -47,8 +47,8 @@ vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "tmux-sessionizer" })
 
 -- Quickfix remaps
-vim.keymap.set("n", "<C-j>", ":cnext<CR>", { desc = "quickfix list next" })
-vim.keymap.set("n", "<C-k>", ":cprev<CR>", { desc = "quickfix list prev" })
+vim.keymap.set("n", "<leader>cj", ":cnext<CR>", { desc = "quickfix list next" })
+vim.keymap.set("n", "<leader>ck", ":cprev<CR>", { desc = "quickfix list prev" })
 vim.keymap.set("n", "<leader>co", ":copen<CR>", { desc = "quickfix list open" })
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>", { desc = "quickfix list close" })
 vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'f')<CR>", { desc = "quickfix list clear" })
