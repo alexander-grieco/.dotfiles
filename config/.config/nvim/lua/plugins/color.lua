@@ -1,21 +1,21 @@
 return {
-  'catppuccin/nvim',
+  "catppuccin/nvim",
   priority = 1000,
   lazy = false,
   config = function()
-    require('catppuccin').setup {
-      flavour = 'frappe', -- latte, frappe, macchiato, mocha
+    require("catppuccin").setup({
+      flavour = "frappe", -- latte, frappe, macchiato, mocha
       background = {
         -- :h background
-        light = 'latte',
-        dark = 'frappe',
+        light = "latte",
+        dark = "frappe",
       },
       transparent_background = false, -- disables setting the background color.
       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
       term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
       dim_inactive = {
         enabled = false, -- dims the background color of inactive window
-        shade = 'dark',
+        shade = "dark",
         percentage = 0.15, -- percentage of the shade to apply to the inactive window
       },
       no_italic = false, -- Force no italic
@@ -23,8 +23,8 @@ return {
       no_underline = false, -- Force no underline
       styles = {
         -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { 'italic' }, -- Change the style of comments
-        conditionals = { 'italic' },
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
         loops = {},
         functions = {},
         keywords = {},
@@ -41,16 +41,42 @@ return {
       integrations = {
         cmp = true,
         gitsigns = true,
+        neogit = true,
         nvimtree = true,
         treesitter = true,
+        telescope = true,
         notify = false,
         mini = {
           enabled = true,
-          indentscope_color = '',
         },
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        indent_blankline = {
+          enabled = true,
+          scope_color = "green", -- catppuccin color (eg. `lavender`) Default: text
+          colored_indent_levels = true,
+        },
+        rainbow_delimiters = true,
+        native_lsp = {
+          enabled = true,
+          virtual_text = {
+            errors = { "italic" },
+            hints = { "italic" },
+            warnings = { "italic" },
+            information = { "italic" },
+            ok = { "italic" },
+          },
+          underlines = {
+            errors = { "underline" },
+            hints = { "underline" },
+            warnings = { "underline" },
+            information = { "underline" },
+            ok = { "underline" },
+          },
+          inlay_hints = {
+            background = true,
+          },
+        },
       },
-    }
-    vim.cmd.colorscheme 'catppuccin'
+    })
+    vim.cmd.colorscheme("catppuccin")
   end,
 }
