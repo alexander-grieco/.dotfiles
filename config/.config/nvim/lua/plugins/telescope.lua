@@ -85,8 +85,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
             ["<C-h>"] = "which_key",
             ["<C-q>"] = actions.add_to_qflist + actions.open_qflist,
             ["<C-w>"] = actions.add_selected_to_qflist + actions.open_qflist,
-            -- ["<C-i>"] = lga_actions.quote_prompt(),
-            -- ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
           },
         },
         vimgrep_arguments = {
@@ -103,7 +101,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
       extensions = {
         live_grep_args = {
           auto_quoting = true, -- enable/disable auto-quoting
-          -- define mappings, e.g.
           mappings = { -- extend mappings
             i = {
               ["<C-i>"] = lga_actions.quote_prompt(),
