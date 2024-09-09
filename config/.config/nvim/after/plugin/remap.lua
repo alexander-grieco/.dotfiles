@@ -36,12 +36,15 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile", { desc = "[P]lenary [T]est" })
 
 -- Increment all numbers in visual selection
-vim.keymap.set("v", "<leader>vi", ":s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv", { desc = "[I]ncrement Numbers, or <C-a>" })
+vim.keymap.set("v", "<leader>vi", ":s/\\%V\\d\\+\\%V/\\=submatch(0)+1/g<CR>gv=gv",
+  { desc = "[I]ncrement Numbers, or <C-a>" })
 -- Decrement all numbers in visual selection
-vim.keymap.set("v", "<leader>vd", ":s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv", { desc = "[D]ecrement Numbers, or <C-x>" })
+vim.keymap.set("v", "<leader>vd", ":s/\\%V\\d\\+\\%V/\\=submatch(0)-1/g<CR>gv=gv",
+  { desc = "[D]ecrement Numbers, or <C-x>" })
 
 -- Set up sed command on current word
-vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace current word" })
+vim.keymap.set("n", "<leader>rp", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "Replace current word" })
 
 -- Run tmux-sessionizer from within nvim
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "tmux-sessionizer" })
@@ -57,8 +60,13 @@ vim.keymap.set("n", "<leader>cq", ":call setqflist([], 'f')<CR>", { desc = "quic
 vim.keymap.set("n", "<C-s>", ":lnext<CR>", { desc = "quickfix list next" })
 vim.keymap.set("n", "<C-a>", ":lprev<CR>", { desc = "quickfix list prev" })
 vim.keymap.set("n", "<leader>lo", ":lop<CR>", { desc = "loclist list open for current window" })
-vim.keymap.set("n", "<leader>lq", ":call setloclist(0, [], 'r')<CR>:lcl<CR>", { desc = "loclist list clear for current window" })
+vim.keymap.set("n", "<leader>lq", ":call setloclist(0, [], 'r')<CR>:lcl<CR>",
+  { desc = "loclist list clear for current window" })
 vim.keymap.set("n", "<leader>lc", ":lcl<CR>", { desc = "loclist list close for current window" })
 
 -- Close all but current buffer
 vim.keymap.set("n", "<leader>o", ":only<CR>", { desc = "Close all but current buffer" })
+
+-- Daily Notes
+vim.keymap.set("n", "<leader>do", ":OpenDailyNote<CR>", { desc = "Open Daily Note file in floating buffer" })
+vim.keymap.set("n", "<leader>di", ":InsertTemplate<CR>", { desc = "Insert Daily Note Template" })

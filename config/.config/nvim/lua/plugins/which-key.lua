@@ -13,7 +13,7 @@
 -- after the plugin has been loaded:
 --  config = function() ... end
 
-return { -- Useful plugin to show you pending keybinds.
+return {              -- Useful plugin to show you pending keybinds.
   "folke/which-key.nvim",
   event = "VimEnter", -- Sets the loading event to 'VeryEnter'
   priority = 800,
@@ -22,7 +22,7 @@ return { -- Useful plugin to show you pending keybinds.
 
     -- Document existing key chains
     require("which-key").add {
-      { "<leader>d", name = "[D]ocument" },
+      { "<leader>d", name = "[D]aily" },
       { "<leader>r", name = "[R]ename" },
       { "<leader>s", name = "[S]earch" },
       { "<leader>w", name = "[W]orkspace" },
