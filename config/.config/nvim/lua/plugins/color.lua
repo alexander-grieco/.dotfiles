@@ -39,7 +39,7 @@ return {
       color_overrides = {},
       custom_highlights = {},
       integrations = {
-        cmp = true,
+        -- cmp = true,
         gitsigns = true,
         neogit = true,
         nvimtree = true,

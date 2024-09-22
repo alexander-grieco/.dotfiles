@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 -- Buffer navigation
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "[B]uffer [P]revious" })
+vim.keymap.set("n", "<C-n>", ":bn<CR>", { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<C-p>", ":bp<CR>", { desc = "[B]uffer [P]revious" })
 
 -- Visual mode move highlighted text
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Down" })

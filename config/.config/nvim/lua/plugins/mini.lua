@@ -16,6 +16,28 @@ return { -- Collection of various small independent plugins/modules
     -- - sr)'  - [S]urround [R]eplace [)] [']
     require("mini.surround").setup()
 
+    -- Search forward/backward
+    require("mini.bracketed").setup()
+
+    -- Comment Lines
+    require("mini.comment").setup()
+
+    -- Completion help
+    require("mini.completion").setup()
+
+    -- Highlight current word
+    require("mini.cursorword").setup()
+
+    -- Autopairs
+    require("mini.pairs").setup()
+
+    -- Tabbed buffers
+    require("mini.icons").setup()
+    require("mini.tabline").setup()
+
+    -- Trim extraneous whitespace
+    require("mini.trailspace").setup()
+
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,
     --  and try some other statusline plugin
