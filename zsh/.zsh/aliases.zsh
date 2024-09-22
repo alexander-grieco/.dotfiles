@@ -14,7 +14,6 @@ alias c="clear"
 alias sb="source ~/.zshrc"
 alias vb="vim ~/.zshrc"
 alias ddd="cd $HOME/dapper"
-alias cat="bat"
 
 # Vim
 alias vim="nvim"
