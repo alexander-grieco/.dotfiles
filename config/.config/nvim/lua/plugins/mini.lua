@@ -22,9 +22,6 @@ return { -- Collection of various small independent plugins/modules
     -- Comment Lines
     require("mini.comment").setup()
 
-    -- Completion help
-    require("mini.completion").setup()
-
     -- Highlight current word
     require("mini.cursorword").setup()
 
