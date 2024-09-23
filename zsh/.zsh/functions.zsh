@@ -10,9 +10,13 @@ function code {
 }
 
 function gmr {
-    #branch=$(git remote show origin | grep 'HEAD branch' | cut -d':' -f2 | tr -d ' ')
-    git checkout main
-    git pull origin main
+    default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+
+    if [ -z "$default_branch" ]; then
+        default_branch="main"
+    fi
+    git checkout $default_branch
+    git pull origin $default_branch
     if [ $# != 0 ]
     then
         git checkout -b "$1"

@@ -61,7 +61,7 @@ local function open_floating_file()
 
   -- Create a floating window
   local buf = vim.api.nvim_create_buf(false, true) -- Create a new buffer
-  local win = vim.api.nvim_open_win(buf, true, {
+  vim.api.nvim_open_win(buf, true, {
     relative = 'editor',
     width = width,
     height = height,
