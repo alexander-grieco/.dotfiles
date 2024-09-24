@@ -22,8 +22,8 @@ return { -- Collection of various small independent plugins/modules
     -- Comment Lines
     require("mini.comment").setup()
 
-    -- Highlight current word
-    require("mini.cursorword").setup()
+    -- -- Highlight current word
+    -- require("mini.cursorword").setup()
 
     -- Autopairs
     require("mini.pairs").setup()
