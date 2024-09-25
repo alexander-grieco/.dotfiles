@@ -4,20 +4,30 @@ return {
   config = function()
     require("hlchunk").setup({
       chunk = {
+        priority = 100,
         textobject = "ic",
         use_treesitter = true,
         enable = true,
         style = {
-          "#00ffff",
-          "#c21f30",
+          "#f4b8e4",
+          "#e78284",
         },
         duration = 230,
       },
       indent = {
-        enable = true
+        enable = true,
+        chars = {
+          "│",
+          "¦",
+          "┆",
+          "┊",
+        },
       },
       line_num = {
-        enable = true
+        enable = true,
+        style = {
+          "#f4b8e4",
+        },
       },
     })
   end
