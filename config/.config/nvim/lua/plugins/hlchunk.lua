@@ -5,7 +5,7 @@ return {
     require("hlchunk").setup({
       chunk = {
         textobject = "ic",
-        use_treesitter = false,
+        use_treesitter = true,
         enable = true,
         style = {
           "#00ffff",
@@ -16,10 +16,9 @@ return {
       indent = {
         enable = true
       },
-      -- line_num = {
-      --   style = "#00ffff",
-      --   enable = true
-      -- }
+      line_num = {
+        enable = true
+      },
     })
   end
 }
