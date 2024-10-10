@@ -36,6 +36,7 @@ alias kl="k logs"
 alias kex="k explain --recursive"
 alias khelp="k api-resources"
 alias k-="kubectx -"
+alias kx="kubectx"
 
 # Terraform
 alias tf="terraform"

@@ -1,6 +1,12 @@
 -- Bring up netrw
 vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 
+-- Octo GitHub
+vim.keymap.set("n", "<leader>prl", "<cmd>Octo pr list<CR>")
+vim.keymap.set("n", "<leader>pro", ":Octo pr list ")
+vim.keymap.set("n", "<leader>prc", "<cmd>Octo pr create<CR>")
+vim.keymap.set("n", "<leader>prr", "<cmd>Octo pr reload<CR>")
+
 -- Buffer navigation
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "[B]uffer [P]revious" })
