@@ -12,8 +12,6 @@ else
   export GIT_SSH_COMMAND='ssh'
 fi
 
-source <(kubectl completion zsh)
-
 # FZF configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
