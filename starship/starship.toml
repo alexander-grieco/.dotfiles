@@ -9,6 +9,9 @@ add_newline = false
 # Which colour palette to use
 palette = "catppuccin_frappe"
 
+# Up timeout to avoid timeout errors
+command_timeout = 750
+
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
