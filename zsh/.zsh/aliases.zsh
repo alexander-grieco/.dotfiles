@@ -50,3 +50,6 @@ alias cips="curl http://localhost:8080/api/v1/projects"
 
 # Special ssh
 alias qssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
+# zellij
+alias zj="zellij"
