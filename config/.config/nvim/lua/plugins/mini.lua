@@ -28,9 +28,7 @@ return { -- Collection of various small independent plugins/modules
     -- Autopairs
     require("mini.pairs").setup()
 
-    -- Tabbed buffers
     require("mini.icons").setup()
-    require("mini.tabline").setup()
 
     -- Trim extraneous whitespace
     require("mini.trailspace").setup()
