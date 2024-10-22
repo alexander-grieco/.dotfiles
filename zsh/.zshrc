@@ -21,4 +21,10 @@ autoload -Uz compinit && compinit
 source <(kubectl completion zsh)
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/nomad nomad
+# complete -o nospace -C /usr/local/bin/nomad nomad
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
