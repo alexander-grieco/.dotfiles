@@ -3,6 +3,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 if [[ $_distro == "macos" ]]; then
   alias ls="gls --color --group-directories-first"
+  # alias ls="ls"
   alias cdd="cd ~/Documents/B_Product_Development/"
 else
   alias ls="ls --color --group-directories-first"
