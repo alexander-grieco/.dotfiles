@@ -1,3 +1,4 @@
+[general]
 import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
 [env]
@@ -16,5 +17,5 @@ save_to_clipboard = true
 [window]
 option_as_alt = "Both"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/zsh"

@@ -18,10 +18,6 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-            pkgs.alacritty
-            pkgs.mkalias
-            pkgs.kitty
-            pkgs.obsidian
             pkgs.tmux
         ];
 
@@ -44,37 +40,74 @@
           ];
           casks = [
             "the-unarchiver"
+            "alacritty"
+            "kitty"
+            "obsidian"
+            "arc"
+            "raycast"
+            "rectangle"
+            "notion-calendar"
+            "notion"
+            "1password"
+            "nextcloud"
           ];
           masApps = {
             "Tailscale" = 1475387142;
           };
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
         };
 
         fonts.packages = [
           (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; })
         ];
 
-        # Begin - create application alias
-        system.activationScripts.applications.text = let
-          env = pkgs.buildEnv {
-            name = "system-applications";
-            paths = config.environment.systemPackages;
-            pathsToLink = "/Applications";
+      # System settings defaults
+      # Use `darwin-help` for documentation
+      system = {
+        defaults = {
+          dock = {
+            autohide = true; # autohides dock
+            magnification = true; # Allows magnification of icons
+            # Apps to keep in dock
+            persistent-apps = [
+              "/System/Applications/System Settings.app"
+              "/Applications/Notion Calendar.app"
+              "/Applications/Notion.app"
+              "/Applications/Arc.app/"
+              "/Applications/Alacritty.app"
+            ];
+            wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver
           };
-        in
-          pkgs.lib.mkForce ''
-          # Set up applications.
-          echo "setting up /Applications..." >&2
-          rm -rf /Applications/Nix\ Apps
-          mkdir -p /Applications/Nix\ Apps
-          find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-          while read src; do
-            app_name=$(basename "$src")
-            echo "copying $src" >&2
-            ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-          done
-              '';
-        # End - create application alias
+          finder = {
+            AppleShowAllFiles = true; # Show hidden files
+            FXPreferredViewStyle = "Nlsv"; # Default view: list view
+            QuitMenuItem = true; # Allow quitting Finder app
+            ShowPathbar = true; # Show path breadcrumbs in finder windows
+            _FXSortFoldersFirst = true; # Show folders first when sorting by name
+          };
+          loginwindow = {
+            GuestEnabled = false; # Disable guest login
+          };
+          screencapture = {
+            location = "~/Desktop/Screenshots/"; # default screenshot location
+            type = "png"; # default screenshot image format
+          };
+          screensaver = {
+            askForPassword = true; # Always require password when screensaver gets activated
+            askForPasswordDelay = 60; # Allow 60 second grace period before asking for password
+          };
+          NSGlobalDomain = {
+            AppleICUForce24HourTime = true; # Use 24hr time format
+            AppleShowAllFiles = true; # Show hidden files
+            "com.apple.swipescrolldirection" = false; # Disable "natural" scroll direction
+          };
+        };
+        keyboard = {
+          enableKeyMapping = true; # Enable keymap settings
+          remapCapsLockToEscape = true; # Make capslock another escape key (handy for laptop keyboards)
+        };
+      };
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
