@@ -19,6 +19,7 @@
       environment.systemPackages =
         [
             pkgs.tmux
+            pkgs.obsidian
         ];
 
         homebrew = {
@@ -42,7 +43,6 @@
             "the-unarchiver"
             "alacritty"
             "kitty"
-            "obsidian"
             "arc"
             "raycast"
             "rectangle"
@@ -72,6 +72,7 @@
             # Apps to keep in dock
             persistent-apps = [
               "/System/Applications/System Settings.app"
+              "${pkgs.obsidian}/Applications/Obsidian.app/"
               "/Applications/Notion Calendar.app"
               "/Applications/Notion.app"
               "/Applications/Arc.app/"
@@ -81,7 +82,7 @@
           };
           finder = {
             AppleShowAllFiles = true; # Show hidden files
-            FXPreferredViewStyle = "Nlsv"; # Default view: list view
+            FXPreferredViewStyle = "clmv"; # Default view: column view
             QuitMenuItem = true; # Allow quitting Finder app
             ShowPathbar = true; # Show path breadcrumbs in finder windows
             _FXSortFoldersFirst = true; # Show folders first when sorting by name
@@ -101,6 +102,7 @@
             AppleICUForce24HourTime = true; # Use 24hr time format
             AppleShowAllFiles = true; # Show hidden files
             "com.apple.swipescrolldirection" = false; # Disable "natural" scroll direction
+            KeyRepeat = 2;
           };
         };
         keyboard = {
