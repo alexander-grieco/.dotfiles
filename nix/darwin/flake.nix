@@ -20,6 +20,7 @@
         [
             pkgs.tmux
             pkgs.obsidian
+            pkgs.terraform
         ];
 
         homebrew = {
