@@ -30,6 +30,7 @@
             "coreutils"
             "gh"
             "fzf"
+            "joshmedeski/sesh/sesh"
             "libsigc++"
             "lua"
             "luajit"
@@ -38,6 +39,7 @@
             "tree-sitter"
             "vim"
             "wget"
+            "zoxide"
             "zsh"
           ];
           casks = [
