@@ -54,6 +54,10 @@ alias sshq="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 alias gm="git checkout main && git pull origin main --rebase"
 alias gbr="git branch | grep -v \"main\" | xargs git branch -D"
 
+# Obsidian
+# alias no="cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes"
+alias no="sesh connect ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes"
+
 # Kubernetes
 alias k="kubectl"
 alias kg="k get"
@@ -80,3 +84,6 @@ alias qssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 # zellij
 alias zj="zellij"
+
+# zoxide
+alias z="zoxide"
