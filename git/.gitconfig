@@ -66,6 +66,7 @@
 	colorMoved = zebra
 [core]
 	pager = less --RAW-CONTROL-CHARS
+	excludesfile = ~/.gitignore-global
 [commit]
 	gpgsign = true
 [gpg]
