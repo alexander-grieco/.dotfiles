@@ -70,8 +70,8 @@ return { -- Autocompletion
         end, { "i", "s" }),
       },
       sources = {
-        { name = "copilot" },
         { name = "nvim_lsp" },
+        { name = "copilot" },
         { name = "luasnip" },
         { name = "path" },
       },

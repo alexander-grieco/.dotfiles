@@ -1,6 +1,20 @@
 -- Bring up netrw
 vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 
+-- Window resize remaps
+vim.keymap.set("n", "<C-k>", ":resize +2<CR>", { desc = "Resize window up" })
+vim.keymap.set("n", "<C-j>", ":resize -2<CR>", { desc = "Resize window down" })
+vim.keymap.set("n", "<C-l>", ":vertical resize +2<CR>", { desc = "Resize window left" })
+vim.keymap.set("n", "<C-h>", ":vertical resize -2<CR>", { desc = "Resize window right" })
+vim.keymap.set("n", "<leader>zi", ":tab split<CR>", { desc = "Zoom into current pane" })
+vim.keymap.set("n", "<leader>zo", ":tab close<CR>", { desc = "Zoom out of current pane" })
+
+-- Window navigation remaps
+-- vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Navigate to window left" })
+-- vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Navigate to window down" })
+-- vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Navigate to window up" })
+-- vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Navigate to window right" })
+
 -- Octo GitHub
 vim.keymap.set("n", "<leader>prl", "<cmd>Octo pr list<CR>")
 vim.keymap.set("n", "<leader>pro", ":Octo pr list ")
@@ -8,8 +22,8 @@ vim.keymap.set("n", "<leader>prc", "<cmd>Octo pr create<CR>")
 vim.keymap.set("n", "<leader>prr", "<cmd>Octo pr reload<CR>")
 
 -- Buffer navigation
-vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "[B]uffer [N]ext" })
-vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "[B]uffer [P]revious" })
+vim.keymap.set("n", "<leader>nn", ":bn<CR>", { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<leader>np", ":bp<CR>", { desc = "[B]uffer [P]revious" })
 vim.keymap.set("n", "<C-n>", ":bn<CR>", { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<C-p>", ":bp<CR>", { desc = "[B]uffer [P]revious" })
 

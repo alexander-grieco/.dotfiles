@@ -31,6 +31,7 @@
             "gh"
             "fzf"
             "joshmedeski/sesh/sesh"
+            "dlv"
             "fd"
             "libsigc++"
             "lua"
