@@ -37,7 +37,7 @@ return { -- Autoformat
       hcl = { "hcl_fmt" },
       rust = { "rustfmt" },
       nomad = { "nomad_fmt" },
-      go = { "gofmt", "goimports" },
+      -- go = { "goimports", "gofmt" },
       javascript = { "prettierd", "prettier" },
       typescript = { "prettierd", "prettier" },
       -- Conform can also run multiple formatters sequentially

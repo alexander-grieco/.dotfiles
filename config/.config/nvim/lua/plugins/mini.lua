@@ -34,10 +34,42 @@ return { -- Collection of various small independent plugins/modules
     require("mini.trailspace").setup()
 
     -- Simple and easy statusline.
-    --  You could remove this setup call if you don't like it,
-    --  and try some other statusline plugin
     local statusline = require "mini.statusline"
-    statusline.setup()
+    statusline.setup({
+      content = {
+        active = function()
+          local mode, mode_hl   = statusline.section_mode({ trunc_width = 120 })
+          local git             = statusline.section_git({ trunc_width = 40 })
+          local diff            = statusline.section_diff({ trunc_width = 75 })
+          local diagnostics     = statusline.section_diagnostics({ trunc_width = 75 })
+          local lsp             = statusline.section_lsp({ trunc_width = 75 })
+          local filename        = statusline.section_filename({ trunc_width = 140 })
+          local fileinfo        = statusline.section_fileinfo({ trunc_width = 120 })
+          local location        = statusline.section_location({ trunc_width = 75 })
+          local search          = statusline.section_searchcount({ trunc_width = 75 })
+          local macro_recording = vim.fn.reg_recording()
+
+          -- Adds macro recording status
+          local macro_status    = ""
+          if macro_recording ~= "" then
+            macro_status = string.format("Recording @%s", macro_recording)
+          end
+
+          -- return table.concat({ mode, git, diagnostics, filename, fileinfo, macro_status }, " ")
+          return MiniStatusline.combine_groups({
+            { hl = mode_hl,                 strings = { mode } },
+            { hl = 'MiniStatuslineDevinfo', strings = { git, diff, diagnostics, lsp } },
+            '%<', -- Mark general truncate point
+            { hl = 'MiniStatuslineFilename', strings = { filename } },
+            '%=', -- End left alignment
+            { hl = 'MiniStatuslineFileinfo', strings = { fileinfo } },
+            { hl = mode_hl,                  strings = { macro_status } },
+            { hl = mode_hl,                  strings = { search, location } },
+          })
+        end,
+        inactive = nil,
+      },
+    })
     statusline.section_location = function()
       return "%2l:%-2v"
     end
