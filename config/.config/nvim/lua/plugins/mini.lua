@@ -20,7 +20,7 @@ return { -- Collection of various small independent plugins/modules
     require("mini.bracketed").setup()
 
     -- Comment Lines
-    require("mini.comment").setup()
+    -- require("mini.comment").setup()
 
     -- -- Highlight current word
     -- require("mini.cursorword").setup()

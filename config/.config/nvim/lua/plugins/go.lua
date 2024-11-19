@@ -7,6 +7,7 @@ return {
   },
   config = function()
     local go = require("go")
+    local fmt = require("go.format")
     go.setup()
     vim.keymap.set("n", "<leader>gr", ":GoRun % -F<CR>", { desc = "Go run" })
     vim.keymap.set("n", "<leader>gch", ":GoCheat ", { desc = "Go chead sheet" })
@@ -34,7 +35,7 @@ return {
     vim.api.nvim_create_autocmd("BufWritePre", {
       pattern = "*.go",
       callback = function()
-        require('go.format').goimports()
+        fmt.goimport()
       end,
       group = format_sync_grp,
     })
