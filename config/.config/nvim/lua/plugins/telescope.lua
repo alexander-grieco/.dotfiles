@@ -106,6 +106,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
               ["<C-i>"] = lga_actions.quote_prompt(),
               ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
               ["<C-t>"] = lga_actions.quote_prompt({ postfix = " -t" }),
+              ["<C-q>"] = actions.add_to_qflist + actions.open_qflist,
+              ["<C-w>"] = actions.add_selected_to_qflist + actions.open_qflist,
+              ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
             },
           },
           -- ... also accepts theme settings, for example:
