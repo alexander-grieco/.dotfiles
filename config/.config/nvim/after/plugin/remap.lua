@@ -1,6 +1,9 @@
 -- Bring up netrw
 vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 
+-- Source file
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Source file" })
+
 -- Window resize remaps
 vim.keymap.set("n", "<C-k>", ":resize +2<CR>", { desc = "Resize window up" })
 vim.keymap.set("n", "<C-j>", ":resize -2<CR>", { desc = "Resize window down" })
