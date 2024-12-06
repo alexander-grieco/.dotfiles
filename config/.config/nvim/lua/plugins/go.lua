@@ -26,9 +26,10 @@ return {
         end
       end, 100)
     end, { desc = "Go doc" })
-    vim.keymap.set("n", "<leader>gtf", ":GoTest % -F<CR>", { desc = "Go test current file" })
-    vim.keymap.set("n", "<leader>gtc", ":GoTestFunc % -F<CR>", { desc = "Go test current file" })
-    vim.keymap.set("n", "<leader>gtp", ":GoTestPkg % -F<CR>", { desc = "Go test current file" })
+    vim.keymap.set("n", "<leader>gtf", ":GoTest . -Fv<CR>", { desc = "Go test current file" })
+    vim.keymap.set("n", "<leader>gtc", ":GoTestFunc . -Fv<CR>", { desc = "Go test current file" })
+    vim.keymap.set("n", "<leader>gtp", ":GoTestPkg . -Fv<CR>", { desc = "Go test current file" })
+    vim.keymap.set("n", "<leader>gmt", ":!go mod tidy<CR>", { desc = "Tidy Go modules" })
 
     -- Run gofmt + goimports on save
     local format_sync_grp = vim.api.nvim_create_augroup("goimports", {})

@@ -1,3 +1,4 @@
+-- Debugger setup
 return {
   {
     "mfussenegger/nvim-dap",
