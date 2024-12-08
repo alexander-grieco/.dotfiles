@@ -57,6 +57,8 @@
             "the-unarchiver"
             "alacritty"
             "kitty"
+            "font-maple-mono"
+            "font-fira-code-nerd-font"
             "arc"
             "raycast"
             "rectangle"
