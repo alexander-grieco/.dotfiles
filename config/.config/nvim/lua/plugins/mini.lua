@@ -26,21 +26,7 @@ return { -- Collection of various small independent plugins/modules
     -- require("mini.cursorword").setup()
 
     -- Autopairs
-    require("mini.pairs").setup({
-      mappings = {
-        ['('] = { action = 'open', pair = '()', neigh_pattern = '[^%w%p]$' },
-        ['['] = { action = 'open', pair = '[]', neigh_pattern = '[^%w%p]$' },
-        ['{'] = { action = 'open', pair = '{}', neigh_pattern = '[^%w%p]$' },
-
-        [')'] = { action = 'close', pair = '()', neigh_pattern = '[^\\].' },
-        [']'] = { action = 'close', pair = '[]', neigh_pattern = '[^\\].' },
-        ['}'] = { action = 'close', pair = '{}', neigh_pattern = '[^\\].' },
-
-        ['"'] = { action = 'closeopen', pair = '""', neigh_pattern = '[^%w%p]$',   register = { cr = false } },
-        ["'"] = { action = 'closeopen', pair = "''", neigh_pattern = '[^%w%p]$', register = { cr = false } },
-        ['`'] = { action = 'closeopen', pair = '``', neigh_pattern = '[^%w%p]$',   register = { cr = false } },
-      },
-    })
+    require("mini.pairs").setup()
 
     require("mini.icons").setup()
 

@@ -25,6 +25,9 @@
 
         homebrew = {
           enable = true;
+          taps = [
+            "jesseduffield/lazygit"
+          ];
           brews = [
             "mas"
             "coreutils"
@@ -34,6 +37,7 @@
             "dlv"
             "fd"
             "libsigc++"
+            "jesseduffield/lazygit/lazygit"
             "lua"
             "luajit"
             "neovim"
