@@ -9,7 +9,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>gs",
+      "<leader>gss",
       function()
         require("neogit").open {}
       end,

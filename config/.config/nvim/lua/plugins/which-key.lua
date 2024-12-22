@@ -31,7 +31,6 @@ return {              -- Useful plugin to show you pending keybinds.
       { "<leader>o", name = "[O]nly current buffer" },
       { "<leader>l", name = "[L]oclist Operations" },
       { "<leader>c", name = "Qui[C]kfix Operations" },
-      { "<leader>x", name = "Trouble Operations" },
     }
   end,
 }

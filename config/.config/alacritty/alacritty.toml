@@ -25,3 +25,8 @@ option_as_alt = "Both"
 
 [terminal.shell]
 program = "/opt/homebrew/bin/zsh"
+
+[keyboard]
+bindings = [
+  { key = "Slash", mods = "Control", chars = "\u001f"},
+]

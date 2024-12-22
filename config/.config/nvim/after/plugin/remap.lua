@@ -2,7 +2,8 @@
 vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 
 -- Source file
-vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Source file" })
+vim.keymap.set("n" , "<leader>x", ":.lua<CR>", { desc = "Source file" })
+vim.keymap.set("v" , "<leader>x", ":lua<CR>", { desc = "Source lines" })
 
 -- Window resize remaps
 vim.keymap.set("n", "<C-k>", ":resize +2<CR>", { desc = "Resize window up" })
