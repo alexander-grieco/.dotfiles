@@ -17,7 +17,7 @@ return { -- Autoformat
     notify_on_error = false,
     async = true,
     format_on_save = {
-      timeout_ms = 6000,
+      timeout_ms = 3000,
       lsp_fallback = true,
     },
     formatters = {
@@ -38,8 +38,9 @@ return { -- Autoformat
       rust = { "rustfmt" },
       nomad = { "nomad_fmt" },
       -- go = { "goimports", "gofmt" },
-      javascript = { "prettierd", "prettier" },
+      javascript = { "prettierd", "prettier", stop_after_first = true },
       typescript = { "prettierd", "prettier" },
+      html = { "prettierd", "prettier" },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
