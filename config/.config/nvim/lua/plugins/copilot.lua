@@ -6,6 +6,7 @@ return {
       panel = { enabled = false },
       filetypes = {
         go = false,
+        javascript = false,
       }
     }
   end,
