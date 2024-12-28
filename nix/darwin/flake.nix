@@ -59,6 +59,7 @@
             "kitty"
             "font-maple-mono"
             "font-fira-code-nerd-font"
+            "ghostty"
             "arc"
             "raycast"
             "rectangle"
@@ -95,6 +96,7 @@
               "/Applications/Notion.app"
               "/Applications/Zen Browser.app"
               "/Applications/Arc.app/"
+              "/Applications/Ghostty.app"
               "/Applications/Alacritty.app"
             ];
             wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver
