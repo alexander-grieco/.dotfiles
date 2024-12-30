@@ -1,5 +1,4 @@
-
-## Installation
+# Installation
 
 > Note:
 The mac script should be use for Macos systems only. This script presumes you have `stow` installed and you are placing this repo at `~/.dotfiles`.

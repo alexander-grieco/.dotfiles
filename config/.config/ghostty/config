@@ -14,3 +14,5 @@ shell-integration-features = no-cursor,title
 
 # Window
 window-title-font-family = Maple Mono
+window-padding-x = 0
+window-padding-y = 0
