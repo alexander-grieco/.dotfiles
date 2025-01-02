@@ -52,6 +52,7 @@
             "zsh"
           ];
           casks = [
+            "anki"
             "homerow"
             "nikitabobko/tap/aerospace"
             "the-unarchiver"
@@ -92,12 +93,11 @@
             persistent-apps = [
               "/System/Applications/System Settings.app"
               "${pkgs.obsidian}/Applications/Obsidian.app/"
+              "/Applications/Anki.app"
               "/Applications/Notion Calendar.app"
               "/Applications/Notion.app"
-              "/Applications/Zen Browser.app"
               "/Applications/Arc.app/"
               "/Applications/Ghostty.app"
-              "/Applications/Alacritty.app"
             ];
             wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver
           };
@@ -158,6 +158,7 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#air
     darwinConfigurations."air" = nix-darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew
