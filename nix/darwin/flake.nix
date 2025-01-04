@@ -35,6 +35,7 @@
             "fzf"
             "joshmedeski/sesh/sesh"
             "dlv"
+            "etcd"
             "fd"
             "libsigc++"
             "jesseduffield/lazygit/lazygit"

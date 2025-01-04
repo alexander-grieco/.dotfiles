@@ -40,7 +40,7 @@ return {
       -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
       -- Adjusts spacing to ensure icons are aligned
       nerd_font_variant = 'mono',
-        -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
+      -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
       kind_icons = {
         Copilot = "",
         Text = '󰉿',
