@@ -16,10 +16,12 @@ fi
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/gcp.zsh ]] && source ~/.zsh/gcp.zsh
 
-# # ASDF settings
-# . "$HOME/.asdf/asdf.sh"
-# # append completions to fpath
-# fpath=(${ASDF_DIR}/completions $fpath)
+# Source Dynamic gitconfig settings
+if [[ -v GITHUB_EMAIL ]]; then
+  gse
+else
+  echo "Be sure to set GITHUB_EMAIL env var and re-source"
+fi
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
@@ -28,7 +30,6 @@ autoload -Uz compinit && compinit
 source <(kubectl completion zsh)
 
 autoload -U +X bashcompinit && bashcompinit
-# complete -o nospace -C /usr/local/bin/nomad nomad
 
 eval "$(zoxide init zsh)"
 

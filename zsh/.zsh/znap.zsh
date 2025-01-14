@@ -34,13 +34,10 @@ znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
 # The cache gets regenerated, too, when the eval command has changed. For
 # example, here we include a variable. So, the cache gets invalidated whenever
 # this variable has changed.
-znap source marlonrichert/zcolors
-znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
-# Combine `znap eval` with `curl` or `wget` to download, cache and source
-# individual files:
-znap eval omz-git 'curl -fsSL \
-    https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
+# TODO: see if this gets fixed, causes issue in tmux
+# znap source marlonrichert/zcolors
+# znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
 
 ############################################################################################################################################
 # ZSH Configs

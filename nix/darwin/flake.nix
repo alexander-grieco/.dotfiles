@@ -42,6 +42,7 @@
             "lua"
             "luajit"
             "neovim"
+            "kustomize"
             "node"
             "go"
             "rg"

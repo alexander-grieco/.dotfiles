@@ -1,9 +1,8 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Alex Grieco
-	email = awgrieco@gmail.com
 	signingkey = ~/.ssh/github_ed25519.pub
+[include]
+	path = ~/.gitconfig_dynamic
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [checkout]
@@ -15,16 +14,16 @@
 	localbranch = normal
 	changed = 11 normal
 	header = normal
-	remotebranch = normal
+	remotebranch = normal blink
 	nobranch = normal bold
 	unmerged = 9 normal
 	untracked = normal dim
 [color "branch"]
 	plain = normal
-	remote = normal
+	remote = normal blink
 	current = normal reverse
 	local = normal
-	upstream = normal
+	upstream = normal blink
 [color "remote"]
 	hint = normal dim
 	success = 2 normal
@@ -60,7 +59,7 @@
 [color "decorate"]
 	branch = normal
 	tag = normal
-	remotebranch = normal
+	remotebranch = normal blink
 	stash = normal dim
 	grafted = normal bold
 	HEAD = normal italic
