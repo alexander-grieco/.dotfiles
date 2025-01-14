@@ -15,7 +15,7 @@ return {
         return vim.fn.executable("make") == 1
       end,
     },
-    {"nvim-telescope/telescope-ui-select.nvim"},
+    { "nvim-telescope/telescope-ui-select.nvim" },
     {
       "nvim-telescope/telescope-live-grep-args.nvim",
       version = "^1.0.0",
@@ -29,7 +29,7 @@ return {
     local actions = require("telescope.actions")
     local lga_actions = require("telescope-live-grep-args.actions")
     local lga_shortcuts = require("telescope-live-grep-args.shortcuts")
-   require "config.telescope.multigrep".setup()
+    require "config.telescope.multigrep".setup()
     telescope.setup({
       defaults = {
         file_ignore_patterns = {
@@ -52,6 +52,7 @@ return {
           "--with-filename",
           "--line-number",
           "--column",
+          "--no-ignore",
           "--smart-case",
           "--hidden",
         },

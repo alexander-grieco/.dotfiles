@@ -18,6 +18,7 @@ alias sshq="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 # Git
 alias gm="git checkout main && git pull origin main --rebase"
 alias gbr="git branch | grep -v \"main\" | xargs git branch -D"
+# alias gc="git clone --bare"
 
 # Obsidian
 # alias no="cd ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Notes"

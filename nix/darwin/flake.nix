@@ -33,16 +33,19 @@
             "coreutils"
             "gh"
             "fzf"
-            "joshmedeski/sesh/sesh"
             "dlv"
             "etcd"
             "fd"
             "libsigc++"
+            "kubectx"
             "jesseduffield/lazygit/lazygit"
             "lua"
             "luajit"
             "neovim"
+            "node"
+            "go"
             "rg"
+            "sesh"
             "stow"
             "tmux"
             "tree-sitter"
@@ -68,7 +71,7 @@
             "mactex"
             "notion-calendar"
             "notion"
-            "1password"
+            # "1password"
             "nextcloud"
             "zen-browser"
           ];
@@ -168,7 +171,7 @@
             # Apple silicon only installation
             enableRosetta = true;
             # User owning the Homebrew prefix
-            user = "alexgrieco";
+            user = "alex";
 
             # Since homebrew is already installed
             autoMigrate = true;

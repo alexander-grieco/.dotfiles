@@ -8,7 +8,17 @@ return {
       bigfile = { enabled = true },
       dashboard = { enabled = true },
       gitbrowse = { enabled = true },
-      lazygit = { enabled = true },
+      lazygit = {
+        enabled = true,
+        config = {
+          -- os = {
+          --   open = ":e {{filename}}"
+          -- },
+          gui = {
+            nerdFontsVersion = "3"
+          },
+        }
+      },
       notify = { enabled = true },
       notifier = {
         enabled = true,
