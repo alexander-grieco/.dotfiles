@@ -1,11 +1,21 @@
 #!/usr/bin/env zsh
+
+# Adds placeholder so stow doesn't link entire .config or .local folders
+[[ -d ~/.config ]] ||
+    mkdir -p ~/.config/placeholder
+[[ -d ~/.local ]] ||
+    mkdir -p ~/.local/placeholder
+
+# Set Stow folders
 if [[ -z $STOW_FOLDERS ]]; then
     STOW_FOLDERS="bin,git,macos,config,starship,tmux,zsh"
 fi
 
+# Set Dotfiles
 if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
+# Run install script
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 
