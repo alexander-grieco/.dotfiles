@@ -2,8 +2,8 @@
 vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>")
 
 -- Source file
-vim.keymap.set("n" , "<leader>x", ":.lua<CR>", { desc = "Source file" })
-vim.keymap.set("v" , "<leader>x", ":lua<CR>", { desc = "Source lines" })
+vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Source file" })
+vim.keymap.set("v", "<leader>x", ":lua<CR>", { desc = "Source lines" })
 
 -- Window resize remaps
 vim.keymap.set("n", "<C-k>", ":resize +2<CR>", { desc = "Resize window up" })
@@ -57,6 +57,7 @@ vim.keymap.set("n", "<leader>Y", 'gg"+yG<C-o>')
 
 -- I've been told Q is the worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "s", "<nop>")
 
 -- Plenary Test remap (for plugin development)
 vim.keymap.set("n", "<leader>pt", "<Plug>PlenaryTestFile", { desc = "[P]lenary [T]est" })

@@ -25,8 +25,8 @@ return { -- Collection of various small independent plugins/modules
     -- -- Highlight current word
     -- require("mini.cursorword").setup()
 
-    -- Autopairs
-    require("mini.pairs").setup()
+    -- -- Autopairs
+    -- require("mini.pairs").setup()
 
     require("mini.icons").setup()
 

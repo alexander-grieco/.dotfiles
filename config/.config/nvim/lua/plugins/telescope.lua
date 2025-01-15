@@ -39,7 +39,7 @@ return {
         mappings = {
           i = {
             ["<C-u>"] = false,
-            ["<C-d>"] = false,
+            ["<C-d>"] = actions.delete_buffer,
             ["<C-h>"] = "which_key",
             ["<C-q>"] = actions.add_to_qflist + actions.open_qflist,
             ["<C-w>"] = actions.add_selected_to_qflist + actions.open_qflist,
