@@ -9,25 +9,3 @@
 # Ignore zinit things
 **.zwc
 **webi
-
-# # bin/.local
-# bin/.local/opt/**
-# bin/.local/share/**
-# bin/.local/state/**
-#
-#
-# # .config
-# config/.config/**
-# !config/.config/aerospace/**
-# !config/.config/alacritty/**
-# !config/.config/backgrounds/**
-# !config/.config/ghostty/**
-# !config/.config/github-copilot/**
-# !config/.config/i3/**
-# !config/.config/nvim/**
-# !config/.config/polybar/**
-# !config/.config/rofi/**
-# !config/.config/zellij/**
-# !config/.config/zsh/**
-# !config/.config/picom.conf/**
-#
