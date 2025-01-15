@@ -65,6 +65,9 @@ local options = {
   -- Give more space for displaying messages.
   cmdheight = 1,
   -- filetype = 'on', -- handled by filetypefiletype = 'on' --lugin
+
+  -- for Avante
+  laststatus = 3
 }
 
 -- [[ Setting options ]]
