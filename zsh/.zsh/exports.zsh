@@ -24,3 +24,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Kubernetes
+export KUBE_EDITOR="vim"
