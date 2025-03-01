@@ -111,6 +111,7 @@ return { -- LSP Configuration & Plugins
       tflint = {},
       jqls = {},
       taplo = {},
+      zls = {},
       yamlls = {},
       ts_ls = {},
       terraformls = {

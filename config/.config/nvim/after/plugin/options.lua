@@ -61,6 +61,7 @@ local options = {
   shiftwidth = tab_len,
   expandtab = true,
   smartindent = true,
+  autoindent = true,
   incsearch = true,
   -- Give more space for displaying messages.
   cmdheight = 1,
