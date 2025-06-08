@@ -16,7 +16,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin-frappe",
     },
   },
 
@@ -121,6 +121,7 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "golang",
         "html",
         "javascript",
         "json",
@@ -130,6 +131,7 @@ return {
         "python",
         "query",
         "regex",
+        "terraform",
         "tsx",
         "typescript",
         "vim",
