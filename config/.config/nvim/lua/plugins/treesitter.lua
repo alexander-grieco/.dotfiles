@@ -1,21 +1,39 @@
-return { -- Highlight, edit, and navigate code
-  "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
-  config = function()
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+return {
+  -- add more treesitter parsers
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "terraform",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+      },
+    },
+  },
 
-    ---@diagnostic disable-next-line: missing-fields
-    require("nvim-treesitter.configs").setup {
-      ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc", "regex" },
-      -- Autoinstall languages that are not installed
-      auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
-    }
-
-    -- Additional nvim-treesitter modules that can be used to interact with nvim-treesitter.
-    --    - Incremental selection: Included, see :help nvim-treesitter-incremental-selection-mod
-    --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-    --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
-  end,
+  -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
+  -- would overwrite `ensure_installed` with the new value.
+  -- If you'd rather extend the default config, use the code below instead:
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      -- add tsx and treesitter
+      vim.list_extend(opts.ensure_installed, {
+        "tsx",
+        "typescript",
+      })
+    end,
+  },
 }

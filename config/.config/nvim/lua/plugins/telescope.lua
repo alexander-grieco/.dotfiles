@@ -1,20 +1,18 @@
--- Fuzzy Finder (files, lsp, etc)
 return {
   "nvim-telescope/telescope.nvim",
   event = "VimEnter",
-  branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-
-      -- `cond` is a condition used to determine whether this plugin should be
-      -- installed and loaded.
-      cond = function()
-        return vim.fn.executable("make") == 1
-      end,
-    },
+    -- {
+    --   "nvim-telescope/telescope-fzf-native.nvim",
+    --   build = "make",
+    --
+    --   -- `cond` is a condition used to determine whether this plugin should be
+    --   -- installed and loaded.
+    --   cond = function()
+    --     return vim.fn.executable("make") == 1
+    --   end,
+    -- },
     { "nvim-telescope/telescope-ui-select.nvim" },
     {
       "nvim-telescope/telescope-live-grep-args.nvim",
@@ -28,8 +26,8 @@ return {
     local telescope = require("telescope")
     local actions = require("telescope.actions")
     local lga_actions = require("telescope-live-grep-args.actions")
-    local lga_shortcuts = require("telescope-live-grep-args.shortcuts")
-    require "config.telescope.multigrep".setup()
+    -- local lga_shortcuts = require("telescope-live-grep-args.shortcuts")
+    -- require("config.telescope.multigrep").setup()
     telescope.setup({
       defaults = {
         file_ignore_patterns = {
@@ -60,7 +58,7 @@ return {
       extensions = {
         live_grep_args = {
           auto_quoting = true, -- enable/disable auto-quoting
-          mappings = {         -- extend mappings
+          mappings = { -- extend mappings
             i = {
               ["<C-i>"] = lga_actions.quote_prompt(),
               ["<C-k>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
@@ -75,13 +73,13 @@ return {
           -- theme = { }, -- use own theme spec
           -- layout_config = { mirror=true }, -- mirror preview pane
         },
-        fzf = {
-          fuzzy = true,                   -- false will only do exact matching
-          override_generic_sorter = true, -- override the generic sorter
-          override_file_sorter = true,    -- override the file sorter
-          case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
-          -- the default case_mode is "smart_case"
-        },
+        -- fzf = {
+        --   fuzzy = true, -- false will only do exact matching
+        --   override_generic_sorter = true, -- override the generic sorter
+        --   override_file_sorter = true, -- override the file sorter
+        --   case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+        --   -- the default case_mode is "smart_case"
+        -- },
       },
       pickers = {
         find_files = {
@@ -100,26 +98,14 @@ return {
 
     -- See `:help telescope.builtin`
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
-    vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
     vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-    vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
-    vim.keymap.set("n", "<leader>sw", lga_shortcuts.grep_word_under_cursor, { desc = "[S]earch current [W]ord" })
-    vim.keymap.set("n", "<leader>sg", telescope.extensions.live_grep_args.live_grep_args, { desc = "[S]earch by [G]rep" })
-    vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-    vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
-    vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+    vim.keymap.set(
+      "n",
+      "<leader>sg",
+      telescope.extensions.live_grep_args.live_grep_args,
+      { desc = "[S]earch by [G]rep" }
+    )
     vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
-    -- vim.keymap.set("n", "<leader>sa", telescope.extensions.live_grep_args.live_grep_args, { desc = "Live grep args" })
-
-    -- Slightly advanced example of overriding default behavior and theme
-    vim.keymap.set("n", "<leader>/", function()
-      -- You can pass additional configuration to telescope to change theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-        winblend = 10,
-        previewer = false,
-      }))
-    end, { desc = "[/] Fuzzily search in current buffer" })
 
     -- Also possible to pass additional configuration options.
     --  See `:help telescope.builtin.live_grep()` for information about particular keys
@@ -130,12 +116,12 @@ return {
       })
     end, { desc = "[S]earch [/] in Open Files" })
 
-    -- Shortcut for searching your neovim configuration files
-    vim.keymap.set("n", "<leader>sn", function()
-      local opts = require("telescope.themes").get_ivy({
-        cwd = vim.fn.stdpath("config")
-      })
-      require('telescope.builtin').find_files(opts)
-    end, { desc = "[S]earch [N]eovim files" })
+    -- -- Shortcut for searching your neovim configuration files
+    -- vim.keymap.set("n", "<leader>sn", function()
+    --   local opts = require("telescope.themes").get_ivy({
+    --     cwd = vim.fn.stdpath("config")
+    --   })
+    --   require('telescope.builtin').find_files(opts)
+    -- end, { desc = "[S]earch [N]eovim files" })
   end,
 }
