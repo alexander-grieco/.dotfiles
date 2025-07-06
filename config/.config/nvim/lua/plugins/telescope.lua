@@ -33,6 +33,7 @@ return {
         file_ignore_patterns = {
           -- Ignore git files, but not .github files
           "^%.git%/.-",
+          "node_modules/",
         },
         mappings = {
           i = {
