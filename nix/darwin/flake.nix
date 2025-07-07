@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew"; # May need to update - note "wip" label
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
@@ -55,26 +55,17 @@
             "vim"
             "wget"
             "zoxide"
-            "zellij"
             "zsh"
           ];
           casks = [
-            "anki"
-            "homerow"
-            "nikitabobko/tap/aerospace"
             "the-unarchiver"
-            "alacritty"
-            "kitty"
             "font-maple-mono"
             "font-fira-code-nerd-font"
             "ghostty"
-            "arc"
             "raycast"
             "rectangle"
-            "mactex"
             "notion-calendar"
             "notion"
-            # "1password"
             "nextcloud"
             "zen-browser"
           ];
@@ -86,12 +77,14 @@
         };
 
         fonts.packages = [
-          (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; })
+          pkgs.nerd-fonts.comic-shanns-mono
         ];
 
       # System settings defaults
       # Use `darwin-help` for documentation
       system = {
+        primaryUser = "alex";
+
         defaults = {
           dock = {
             autohide = true; # autohides dock
@@ -103,7 +96,7 @@
               "/Applications/Anki.app"
               "/Applications/Notion Calendar.app"
               "/Applications/Notion.app"
-              "/Applications/Arc.app/"
+              "/Applications/Zen Browser.app/"
               "/Applications/Ghostty.app"
             ];
             wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver
@@ -138,10 +131,6 @@
           remapCapsLockToEscape = true; # Make capslock another escape key (handy for laptop keyboards)
         };
       };
-
-      # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
-      # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
