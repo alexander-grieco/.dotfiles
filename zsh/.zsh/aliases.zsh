@@ -34,6 +34,7 @@ alias kex="k explain --recursive"
 alias khelp="k api-resources"
 alias k-="kubectx -"
 alias kx="kubectx"
+alias jqd="jq '.data | map_values(@base64d)'"
 
 # Terraform
 alias tf="terraform"

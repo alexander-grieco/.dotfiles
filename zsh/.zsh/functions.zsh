@@ -27,6 +27,9 @@ function ksh {
     kubectl get secret "$1" --show-managed-fields -o jsonpath='{range .metadata.managedFields[*]}{.manager}{" did "}{.operation}{" at "}{.time}{"\n"}{end}'
 }
 
+function kss {
+  kubectl get secret "$1" -o json | jq '.data | map_values(@base64d)'}
+
 function gse {
     dynamic-gitconfig.sh
 }
