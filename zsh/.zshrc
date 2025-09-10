@@ -26,9 +26,6 @@ fi
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
-
-source <(kubectl completion zsh)
-
 autoload -U +X bashcompinit && bashcompinit
 
 eval "$(zoxide init zsh)"
@@ -43,3 +40,11 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# kubectl completions
+# If you get tired of slowness: kubectl completion zsh;
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# Kubeswitch
+source <(switcher init zsh)
+source <(switch completion zsh)
