@@ -89,15 +89,12 @@ function gke_contexts() {
     # --- THE FIX ---
     # The LOCATION variable IS the region. No parsing needed. This was the bug.
     local REGION="$LOCATION"
-    echo "  [DEBUG] Step 1 -> Using REGION directly: '${REGION}'"
 
     # 2. Remove the region prefix from the cluster name.
     local REMAINDER=${CLUSTER_NAME#"$REGION-"}
-    echo "  [DEBUG] Step 2 -> REMAINDER after stripping region: '${REMAINDER}'"
 
     # 3. Remove the random suffix from the remainder.
     local PRODUCT_ENV=${REMAINDER%-*}
-    echo "  [DEBUG] Step 3 -> Final PRODUCT_ENV: '${PRODUCT_ENV}'"
 
     if [[ -z "$PRODUCT_ENV" ]]; then
       echo "⚠️  Skipping '${CLUSTER_NAME}': PARSING FAILED."
@@ -106,7 +103,6 @@ function gke_contexts() {
 
     # 4. Construct the new context name
     local NEW_CONTEXT="${PRODUCT_ENV}-${REGION}"
-    echo "  [DEBUG] Step 4 -> Constructed NEW_CONTEXT: '${NEW_CONTEXT}'"
 
     if kubectl config get-contexts "$NEW_CONTEXT" &> /dev/null; then
       echo "✅ Context '${NEW_CONTEXT}' already exists. Skipping."
