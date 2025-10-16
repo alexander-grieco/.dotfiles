@@ -5,7 +5,7 @@ font-family-bold-italic = Maple Mono
 font-size = 16
 
 # Color Scheme
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 
 # Cursor
 cursor-style = block
