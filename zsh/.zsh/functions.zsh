@@ -67,3 +67,62 @@ function gse {
 #
 # source <(command kubectl completion zsh)
 # compdef kubectl kubectl_prompt
+
+
+###############################################################################
+# KUBECTX Context Sync
+###############################################################################
+function gke_contexts() {
+  if [[ -z "$1" ]]; then
+    echo "❌ Error: GCP project ID is required."
+    echo "   Usage: gke_contexts <PROJECT_ID>"
+    return 1
+  fi
+
+  local GCP_PROJECT="$1"
+  echo "🔍 Syncing GKE contexts for project: ${GCP_PROJECT}..."
+  echo "----------------------------------------------------"
+
+  gcloud container clusters list --format="value(name,location)" --project="$GCP_PROJECT" | while read -r CLUSTER_NAME LOCATION || [[ -n "$CLUSTER_NAME" ]]; do
+    echo "--- PROCESSING CLUSTER: ${CLUSTER_NAME} ---"
+
+    # --- THE FIX ---
+    # The LOCATION variable IS the region. No parsing needed. This was the bug.
+    local REGION="$LOCATION"
+    echo "  [DEBUG] Step 1 -> Using REGION directly: '${REGION}'"
+
+    # 2. Remove the region prefix from the cluster name.
+    local REMAINDER=${CLUSTER_NAME#"$REGION-"}
+    echo "  [DEBUG] Step 2 -> REMAINDER after stripping region: '${REMAINDER}'"
+
+    # 3. Remove the random suffix from the remainder.
+    local PRODUCT_ENV=${REMAINDER%-*}
+    echo "  [DEBUG] Step 3 -> Final PRODUCT_ENV: '${PRODUCT_ENV}'"
+
+    if [[ -z "$PRODUCT_ENV" ]]; then
+      echo "⚠️  Skipping '${CLUSTER_NAME}': PARSING FAILED."
+      continue
+    fi
+
+    # 4. Construct the new context name
+    local NEW_CONTEXT="${PRODUCT_ENV}-${REGION}"
+    echo "  [DEBUG] Step 4 -> Constructed NEW_CONTEXT: '${NEW_CONTEXT}'"
+
+    if kubectl config get-contexts "$NEW_CONTEXT" &> /dev/null; then
+      echo "✅ Context '${NEW_CONTEXT}' already exists. Skipping."
+    else
+      echo "⏳ Attempting to create alias '${NEW_CONTEXT}'..."
+      gcloud container clusters get-credentials "$CLUSTER_NAME" --location "$LOCATION" --project "$GCP_PROJECT" &> /dev/null
+      local ORIGINAL_CONTEXT="gke_${GCP_PROJECT}_${LOCATION}_${CLUSTER_NAME}"
+      if kubectl config rename-context "$ORIGINAL_CONTEXT" "$NEW_CONTEXT" &> /dev/null; then
+        echo "👍 Success! Created new context '${NEW_CONTEXT}'."
+      else
+        echo "❌ FAILED to rename context for cluster '${CLUSTER_NAME}'."
+      fi
+    fi
+    echo
+  done
+
+  echo "----------------------------------------------------"
+  echo "✨ Sync complete."
+}
