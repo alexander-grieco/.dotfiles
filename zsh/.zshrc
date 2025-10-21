@@ -44,7 +44,3 @@ esac
 # kubectl completions
 # If you get tired of slowness: kubectl completion zsh;
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-
-# Kubeswitch
-source <(switcher init zsh)
-source <(switch completion zsh)
