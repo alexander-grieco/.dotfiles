@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "dapperlabs-server": {
+      "command": "/usr/local/bin/mcp-remote-gcp",
+      "args": [
+        "https://dapperlabs.app.n8n.cloud/mcp/cf2add78-4568-40cd-9fb8-355c8a03d2e6"
+      ]
+    }
+  }
+}

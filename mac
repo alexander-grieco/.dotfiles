@@ -10,7 +10,7 @@
 
 # Set Stow folders
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="bin,cargo,git,macos,config,starship,tmux,zsh"
+    STOW_FOLDERS="bin,cargo,claude,git,macos,config,starship,tmux,zsh"
 fi
 
 # Set Dotfiles
