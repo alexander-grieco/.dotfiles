@@ -85,15 +85,12 @@ function gke_contexts() {
 
   gcloud container clusters list --format="value(name,location)" --project="$GCP_PROJECT" | while read -r CLUSTER_NAME LOCATION || [[ -n "$CLUSTER_NAME" ]]; do
     echo "--- PROCESSING CLUSTER: ${CLUSTER_NAME} ---"
-
-    # --- THE FIX ---
-    # The LOCATION variable IS the region. No parsing needed. This was the bug.
     local REGION="$LOCATION"
 
-    # 2. Remove the region prefix from the cluster name.
+    # Remove the region prefix from the cluster name.
     local REMAINDER=${CLUSTER_NAME#"$REGION-"}
 
-    # 3. Remove the random suffix from the remainder.
+    # Remove the random suffix from the remainder.
     local PRODUCT_ENV=${REMAINDER%-*}
 
     if [[ -z "$PRODUCT_ENV" ]]; then
@@ -101,7 +98,7 @@ function gke_contexts() {
       continue
     fi
 
-    # 4. Construct the new context name
+    # Construct the new context name
     local NEW_CONTEXT="${PRODUCT_ENV}-${REGION}"
 
     if kubectl config get-contexts "$NEW_CONTEXT" &> /dev/null; then
