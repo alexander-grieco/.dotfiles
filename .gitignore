@@ -4,7 +4,7 @@
 **export-secret**
 
 # Ignore lua lock file
-**lazy-lock.json
+lazy-lock.json
 
 # Ignore zinit things
 **.zwc
