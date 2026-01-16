@@ -1,0 +1,6 @@
+# Sesh configuration
+# This will automatically create 3 windows for every session
+
+# Default session configuration applies to all sessions
+[default_session]
+startup_command = "bash ~/.config/sesh/startup.sh"

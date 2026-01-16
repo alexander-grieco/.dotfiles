@@ -1,0 +1,380 @@
+# =============================================================================
+# KAAOS Configuration Template
+# =============================================================================
+#
+# This template defines all configuration options for a KAAOS knowledge repository.
+# Copy this file to .kaaos/config.yaml in your repository and customize as needed.
+#
+# Template Version: 1.0
+# Last Updated: 2026-01-15
+#
+# Usage:
+#   1. Copy to your KAAOS repository: cp config.yaml.template ~/.kaaos-knowledge/.kaaos/config.yaml
+#   2. Replace placeholder values (marked with {{PLACEHOLDER}})
+#   3. Adjust settings to match your workflow
+#
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Core Settings
+# -----------------------------------------------------------------------------
+# These settings define fundamental repository behavior
+
+version: '1.0'                              # Configuration schema version
+enabled: true                               # Master enable/disable switch
+repository_path: '{{REPOSITORY_PATH}}'      # Full path to repository root
+created_at: '{{CREATED_AT}}'                # ISO-8601 timestamp of creation
+default_organization: '{{ORGANIZATION}}'    # Default organization for commands
+
+# -----------------------------------------------------------------------------
+# Cost Controls
+# -----------------------------------------------------------------------------
+# KAAOS uses Claude API for automated reviews and agents.
+# Set limits to prevent unexpected charges.
+#
+# Typical costs per operation:
+#   - Daily digest:     $0.15-0.30 (Sonnet)
+#   - Weekly synthesis: $0.50-1.00 (Opus for synthesis)
+#   - Monthly review:   $1.50-3.00 (Opus-heavy)
+#   - Quarterly review: $3.00-8.00 (Opus + parallel agents)
+#   - Research task:    $0.30-1.50 (varies by depth)
+#   - Session co-pilot: $0.10-0.50 per hour (background suggestions)
+#
+# Recommended starting limits:
+#   - Light usage:  daily=$2, weekly=$10, monthly=$40, quarterly=$200
+#   - Normal usage: daily=$5, weekly=$25, monthly=$100, quarterly=$500
+#   - Heavy usage:  daily=$10, weekly=$50, monthly=$200, quarterly=$1000
+
+cost_controls:
+  daily_limit_usd: 5.00                     # Maximum daily spend
+  weekly_limit_usd: 25.00                   # Maximum weekly spend
+  monthly_limit_usd: 100.00                 # Maximum monthly spend
+  quarterly_limit_usd: 500.00               # Maximum quarterly spend
+  alert_threshold_percent: 80               # Alert when this % of limit reached
+  hard_stop_on_limit: true                  # Stop all operations when limit hit
+
+  # Per-operation limits (optional, leave null for defaults)
+  per_operation_limits:
+    daily_review: null                      # Max cost per daily review
+    weekly_synthesis: null                  # Max cost per weekly synthesis
+    monthly_review: null                    # Max cost per monthly review
+    quarterly_review: null                  # Max cost per quarterly review
+    research_task: 2.00                     # Max cost per research task
+    copilot_session: 1.00                   # Max cost per hour of co-pilot
+
+  # Cost tracking
+  tracking:
+    detailed_logging: true                  # Log individual API calls with costs
+    daily_report: false                     # Generate daily cost report
+    alert_via_notification: true            # macOS notification on threshold
+
+# -----------------------------------------------------------------------------
+# Model Configuration
+# -----------------------------------------------------------------------------
+# Assign models to different agent roles.
+# Options: opus, sonnet
+#
+# Cost considerations:
+#   - Opus: ~$15/1M input, ~$75/1M output (highest quality)
+#   - Sonnet: ~$3/1M input, ~$15/1M output (good quality, 5x cheaper)
+#
+# Recommendations:
+#   - Use Opus for synthesis, strategic analysis, complex reasoning
+#   - Use Sonnet for maintenance, extraction, routine operations
+
+models:
+  orchestrator: opus                        # Main orchestrator (task routing)
+  research: sonnet                          # Research tasks (web, exploration)
+  synthesis: opus                           # Pattern synthesis (weekly/monthly)
+  maintenance: sonnet                       # Daily maintenance operations
+  copilot: sonnet                           # Real-time session co-pilot
+  gap_detector: sonnet                      # Knowledge gap detection
+  strategic_reviewer: opus                  # Quarterly strategic analysis
+
+  # Model overrides for specific operations (optional)
+  overrides:
+    quarterly_synthesis: opus               # Always use Opus for quarterly
+    decision_extraction: opus               # Use Opus for important decisions
+    quick_lookup: sonnet                    # Use Sonnet for simple lookups
+
+# -----------------------------------------------------------------------------
+# Operational Rhythms
+# -----------------------------------------------------------------------------
+# Configure automated review schedules.
+# Times are in local timezone.
+#
+# Best practices:
+#   - Daily: Before your morning routine (7 AM)
+#   - Weekly: Start of week, before planning (Monday 6 AM)
+#   - Monthly: First of month, during reflection (1st 5 AM)
+#   - Quarterly: Start of quarter, strategic time (1st 3 AM)
+
+rhythms:
+  daily:
+    enabled: true                           # Enable daily digests
+    hour: 7                                 # Hour to run (24-hour format)
+    minute: 0                               # Minute to run
+
+    # Daily content configuration
+    include:
+      yesterdays_activity: true             # Summary of yesterday's work
+      activity_highlights: true             # Key notes, decisions, insights
+      attention_required: true              # Broken links, orphans, tasks
+      todays_meetings: true                 # Meeting prep context
+      active_projects: true                 # Current project status
+      week_tasks: true                      # Tasks due this week
+
+    activity_detail: medium                 # minimal, medium, detailed
+
+    # Attention thresholds
+    attention:
+      broken_links: true                    # Flag broken [[references]]
+      orphaned_notes: true                  # Flag notes with 0 backlinks
+      orphan_days_threshold: 30             # Days before flagging orphan
+      scheduled_tasks: true                 # Flag tasks due today
+      review_due: true                      # Flag items needing review
+      stale_notes: false                    # Flag notes not updated
+      stale_days_threshold: 90              # Days before flagging stale
+
+    # Output limits
+    limits:
+      new_notes: 10                         # Max new notes to show
+      updated_notes: 5                      # Max updated notes to show
+      insights: 10                          # Max insights to show
+      decisions: 5                          # Max decisions to show
+
+  weekly:
+    enabled: true                           # Enable weekly synthesis
+    weekday: 1                              # Day of week (0=Sun, 1=Mon, ...)
+    hour: 6                                 # Hour to run
+    minute: 0                               # Minute to run
+
+    # Weekly content configuration
+    include:
+      activity_summary: true                # Week's activity overview
+      pattern_synthesis: true               # Emerging patterns
+      gap_analysis: true                    # Knowledge gaps identified
+      next_week_prep: true                  # Preparation for next week
+      metrics: true                         # Knowledge graph metrics
+
+  monthly:
+    enabled: true                           # Enable monthly reviews
+    day: 1                                  # Day of month to run
+    hour: 5                                 # Hour to run
+    minute: 0                               # Minute to run
+
+    # Monthly content configuration
+    include:
+      month_overview: true                  # Month's activity summary
+      strategic_alignment: true             # Alignment with goals
+      knowledge_quality: true               # Quality assessment
+      recommendations: true                 # Improvement suggestions
+
+  quarterly:
+    enabled: true                           # Enable quarterly analysis
+    months: [1, 4, 7, 10]                   # Months to run (Jan, Apr, Jul, Oct)
+    day: 1                                  # Day of month to run
+    hour: 3                                 # Hour to run
+    minute: 0                               # Minute to run
+
+    # Quarterly configuration
+    parallel_agents: true                   # Use parallel analysis agents
+    max_parallel: 6                         # Max concurrent agents
+
+    include:
+      strategic_review: true                # Strategic alignment analysis
+      knowledge_audit: true                 # Comprehensive knowledge audit
+      pattern_evolution: true               # How patterns evolved
+      recommendations: true                 # Strategic recommendations
+      okr_alignment: true                   # OKR/goal alignment (if configured)
+
+# -----------------------------------------------------------------------------
+# Feature Flags
+# -----------------------------------------------------------------------------
+# Enable or disable specific KAAOS features.
+
+features:
+  # Git Integration
+  git_hooks: true                           # Install git hooks for insight extraction
+  auto_commit: true                         # Auto-commit during agent operations
+
+  # Real-time Features
+  copilot_suggestions: true                 # Real-time co-pilot via PostToolUse hook
+  auto_organization: true                   # Auto-organize files via SessionEnd hook
+
+  # Maintenance Features
+  auto_maintenance: true                    # Run maintenance during reviews
+  broken_link_detection: true               # Detect and report broken links
+  orphan_detection: true                    # Detect and report orphaned notes
+
+  # Review Features
+  parallel_quarterly: true                  # Use parallel agents for quarterly
+
+  # Experimental Features
+  semantic_search: false                    # Use embeddings for search (requires claude-mem)
+  auto_cross_linking: false                 # Automatically suggest cross-links
+  meeting_integration: false                # Calendar integration (future)
+
+# -----------------------------------------------------------------------------
+# Integrations
+# -----------------------------------------------------------------------------
+# Configure external service integrations.
+
+integrations:
+  # claude-mem Integration (Semantic Search)
+  # Install: /plugin marketplace add thedotmack/claude-mem
+  claude_mem:
+    enabled: false                          # Auto-detected on first use
+    use_for_suggestions: true               # Use for co-pilot suggestions
+    use_for_cross_linking: true             # Use for auto-cross-linking
+    use_for_synthesis: true                 # Use in weekly/monthly synthesis
+    similarity_threshold: 0.75              # Minimum similarity for cross-refs
+
+  # Calendar Integration (Future)
+  calendar:
+    enabled: false                          # Calendar integration
+    provider: null                          # google, apple, outlook
+    sync_frequency: 'hourly'                # How often to sync
+
+  # Notification Integration
+  notifications:
+    enabled: true                           # Enable notifications
+    provider: macos                         # macos, slack, discord (future)
+
+    # What to notify
+    notify_on:
+      digest_ready: true                    # When digest is generated
+      attention_items: true                 # When attention items detected
+      cost_alert: true                      # When cost threshold reached
+      agent_complete: false                 # When background agent completes
+
+# -----------------------------------------------------------------------------
+# Git Configuration
+# -----------------------------------------------------------------------------
+# Configure git behavior for KAAOS operations.
+
+git:
+  auto_commit: true                         # Auto-commit changes
+  commit_prefix: '[KAAOS-AGENT]'            # Prefix for auto-commits
+  require_messages: true                    # Require meaningful messages
+
+  # Branch configuration
+  branches:
+    default: main                           # Default branch name
+    create_feature_branches: false          # Create branches for projects
+
+  # Commit message templates
+  templates:
+    daily_digest: 'Daily digest for {{DATE}}'
+    weekly_synthesis: 'Weekly synthesis for week {{WEEK}}'
+    monthly_review: 'Monthly review for {{MONTH}} {{YEAR}}'
+    quarterly_review: 'Q{{QUARTER}} {{YEAR}} quarterly review'
+    research: 'Research: {{TOPIC}}'
+    session: 'Session {{SESSION_ID}} artifacts'
+
+# -----------------------------------------------------------------------------
+# Output Configuration
+# -----------------------------------------------------------------------------
+# Configure where KAAOS stores outputs.
+
+output:
+  digests:
+    path: '.digests'                        # Path for digest files
+    format: markdown                        # Output format (markdown only)
+    keep_days: 365                          # Days to keep old digests
+
+  logs:
+    path: '.kaaos/logs'                     # Path for log files
+    level: info                             # Logging level (debug, info, warn, error)
+    keep_days: 30                           # Days to keep old logs
+
+  cache:
+    path: '.kaaos/cache'                    # Path for cache files
+    max_size_mb: 100                        # Maximum cache size
+    clear_on_startup: false                 # Clear cache on startup
+
+# -----------------------------------------------------------------------------
+# Organization Defaults
+# -----------------------------------------------------------------------------
+# Default settings for new organizations.
+
+organization_defaults:
+  type: personal                            # personal, team, company
+  auto_context_loading: true                # Auto-load context in sessions
+  default_project: null                     # Default project for sessions
+
+  # Context library defaults
+  context_library:
+    create_organizational: true             # Create _organizational directory
+    create_templates: true                  # Create note templates
+    index_on_create: true                   # Create index file
+
+# -----------------------------------------------------------------------------
+# Session Configuration
+# -----------------------------------------------------------------------------
+# Configure session behavior.
+
+session:
+  # Context loading
+  context_loading:
+    strategy: relevance                     # relevance, recency, hybrid
+    max_items: 20                           # Max context items to load
+    include_recent_conversations: 3         # Number of recent conversations
+    include_project_context: true           # Include project-specific context
+    include_organizational_context: true    # Include organizational context
+
+  # Co-pilot configuration
+  copilot:
+    enabled: true                           # Enable co-pilot agent
+    spawn_automatically: true               # Auto-spawn at session start
+    suggestion_frequency: adaptive          # always, adaptive, on_request
+
+    # What co-pilot monitors
+    monitors:
+      file_changes: true                    # Monitor file changes
+      decisions: true                       # Monitor decision mentions
+      cross_references: true                # Suggest cross-references
+      patterns: true                        # Identify patterns
+
+  # Artifacts
+  artifacts:
+    auto_create_directory: true             # Create artifacts/ in conversations
+    auto_index: true                        # Create index of artifacts
+    max_size_mb: 50                         # Max total artifacts size
+
+# -----------------------------------------------------------------------------
+# Advanced Configuration
+# -----------------------------------------------------------------------------
+# Advanced settings for power users.
+
+advanced:
+  # Performance tuning
+  performance:
+    parallel_operations: true               # Enable parallel operations
+    max_concurrent_agents: 6                # Max concurrent agent threads
+    operation_timeout_seconds: 300          # Timeout for operations
+
+  # Debugging
+  debug:
+    verbose_logging: false                  # Enable verbose logging
+    trace_agent_calls: false                # Trace all agent API calls
+    preserve_temp_files: false              # Keep temporary files
+
+  # Backup configuration
+  backup:
+    enabled: false                          # Enable automated backups
+    strategy: incremental                   # full, incremental
+    destinations: []                        # Backup destinations
+    retention_days: 90                      # Days to keep backups
+
+# =============================================================================
+# End of Configuration
+# =============================================================================
+#
+# After editing this file:
+#   1. Validate YAML syntax: yq '.' .kaaos/config.yaml
+#   2. Restart any running KAAOS sessions
+#   3. Run /kaaos:status to verify configuration
+#
+# For help: https://github.com/your-org/kaaos/docs/configuration.md
+# =============================================================================

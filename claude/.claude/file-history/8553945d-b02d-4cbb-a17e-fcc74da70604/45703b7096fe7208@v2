@@ -1,0 +1,26 @@
+# tmux-sessionizer default window configuration
+# This file defines the default windows created when starting a new tmux session
+
+# Window 1: Claude Code
+# - Title: "claude"
+# - Command: Starts the claude command automatically
+# - Purpose: Interactive AI coding assistant session
+WINDOW_1_NAME="claude"
+WINDOW_1_COMMAND="claude"
+
+# Window 2: Vim
+# - Title: "vim"
+# - Command: Opens vim at the project root (vim .)
+# - Purpose: Code editing session
+WINDOW_2_NAME="vim"
+WINDOW_2_COMMAND="vim ."
+
+# Window 3: Terminal
+# - Title: "terminal"
+# - Command: None (plain terminal)
+# - Purpose: General-purpose terminal for running commands, git operations, etc.
+WINDOW_3_NAME="terminal"
+WINDOW_3_COMMAND=""
+
+# Default window to select after setup (1-3)
+DEFAULT_WINDOW=1

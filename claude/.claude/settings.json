@@ -1,0 +1,12 @@
+{
+  "enabledPlugins": {
+    "core@dapper-claude-code-plugins": true,
+    "infrastructure@dapper-claude-code-plugins": true,
+    "backend@dapper-claude-code-plugins": true,
+    "blockchain@dapper-claude-code-plugins": true,
+    "data@dapper-claude-code-plugins": true,
+    "metaclaude@dapper-claude-code-plugins": true,
+    "product@dapper-claude-code-plugins": true,
+    "kaaos@dapper-claude-code-plugins": true
+  }
+}

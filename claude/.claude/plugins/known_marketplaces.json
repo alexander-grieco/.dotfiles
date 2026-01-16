@@ -1,0 +1,11 @@
+{
+  "dapper-claude-code-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "dapperlabs/dapper-claude-code-plugins"
+    },
+    "installLocation": "/Users/alex/.claude/plugins/marketplaces/dapper-claude-code-plugins",
+    "lastUpdated": "2026-01-16T17:59:44.060Z",
+    "autoUpdate": true
+  }
+}

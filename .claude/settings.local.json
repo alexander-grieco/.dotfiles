@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.joshmedeski.com)",
+      "WebFetch(domain:sesh.fyi)",
+      "Bash(sesh --version:*)",
+      "Bash(sesh --help:*)",
+      "Bash(chmod:*)",
+      "Bash(sesh connect --help:*)",
+      "Bash(sesh list:*)",
+      "Bash(tmux list-sessions:*)",
+      "Bash(sesh connect:*)"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "version": 2,
+  "plugins": {
+    "core@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/core/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T16:03:27.879Z",
+        "lastUpdated": "2026-01-16T16:03:27.879Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "infrastructure@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/infrastructure/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T16:03:59.418Z",
+        "lastUpdated": "2026-01-16T16:03:59.418Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "backend@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/backend/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-01-16T17:40:45.025Z",
+        "lastUpdated": "2026-01-16T17:40:45.025Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "blockchain@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/blockchain/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T17:41:02.781Z",
+        "lastUpdated": "2026-01-16T17:41:02.781Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "data@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/data/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T17:41:11.236Z",
+        "lastUpdated": "2026-01-16T17:41:11.236Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "metaclaude@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/metaclaude/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-01-16T17:41:25.120Z",
+        "lastUpdated": "2026-01-16T17:41:25.120Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "product@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/product/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T17:41:34.867Z",
+        "lastUpdated": "2026-01-16T17:41:34.867Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "kaaos@dapper-claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/kaaos/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-01-16T17:41:50.857Z",
+        "lastUpdated": "2026-01-16T17:41:50.857Z",
+        "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ]
+  }
+}
