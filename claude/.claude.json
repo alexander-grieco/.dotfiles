@@ -1,10 +1,831 @@
 {
+  "numStartups": 45,
+  "installMethod": "native",
+  "autoUpdates": false,
+  "hasSeenTasksHint": true,
+  "customApiKeyResponses": {
+    "approved": [
+      "7WTX_aozEIQ-_KEilwAA"
+    ],
+    "rejected": []
+  },
+  "tipsHistory": {
+    "new-user-warmup": 9,
+    "plan-mode-for-complex-tasks": 2,
+    "terminal-setup": 38,
+    "memory-command": 35,
+    "theme-command": 42,
+    "status-line": 27,
+    "stickers-command": 2,
+    "prompt-queue": 26,
+    "enter-to-steer-in-relatime": 42,
+    "todo-list": 42,
+    "install-github-app": 38,
+    "install-slack-app": 39,
+    "drag-and-drop-images": 39,
+    "paste-images-mac": 39,
+    "double-esc-code-restore": 39,
+    "continue": 39,
+    "shift-tab": 40,
+    "image-paste": 23,
+    "desktop-app": 35,
+    "web-app": 35,
+    "mobile-app": 35,
+    "custom-agents": 37,
+    "default-permission-mode-config": 40,
+    "permissions": 37,
+    "rename-conversation": 29,
+    "custom-commands": 29,
+    "agent-flag": 38
+  },
+  "promptQueueUseCount": 9,
+  "showExpandedTodos": true,
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": true
+  },
+  "cachedGrowthBookFeatures": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    },
+    "tengu_mcp_tool_search": true,
+    "tengu_scratch": false,
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_event_sampling_config": {},
+    "tengu_tool_pear": false,
+    "tengu_thinkback": false,
+    "tengu_pid_based_version_locking": true,
+    "tengu_sumi": true,
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    },
+    "tengu_react_vulnerability_warning": false,
+    "tengu_code_diff_cli": true,
+    "tengu_post_compact_survey": false,
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_ant_attribution_header_new": true,
+    "enhanced_telemetry_beta": false,
+    "tengu_streaming_tool_execution2": false,
+    "tengu_session_memory": false,
+    "tengu_permission_explainer": true,
+    "tengu_bash_haiku_prefetch": true,
+    "tengu_sm_compact": false,
+    "tengu_compact_streaming_retry": false,
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_keybinding_customization": false,
+    "tengu_claudeai_mcp_connectors": false,
+    "tengu_plank_river_frost": "user_intent",
+    "tengu_attribution_header": true,
+    "tengu_brass_pebble": false,
+    "tengu_cache_plum_violet": true,
+    "tengu_scarf_coffee": false,
+    "tengu_keybinding_customization_release": true,
+    "tengu_pr_status_cli": true,
+    "tengu_marble_kite": false,
+    "tengu_kv7_prompt_sort": false,
+    "tengu_cork_m4q": false,
+    "tengu_marble_anvil": false,
+    "tengu_tst_kx7": false
+  },
   "mcpServers": {
     "dapperlabs-server": {
       "command": "/usr/local/bin/mcp-remote-gcp",
       "args": [
         "https://dapperlabs.app.n8n.cloud/mcp/cf2add78-4568-40cd-9fb8-355c8a03d2e6"
       ]
+    }
+  },
+  "userID": "070606183ff8e8e2a66bb00be1575fb2646d3fc7c4b5348cf84c9c1e7fdb7844",
+  "firstStartTime": "2026-01-16T19:47:07.863Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "opusProMigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "cachedChromeExtensionInstalled": false,
+  "changelogLastFetched": 1769627598489,
+  "oauthAccount": {
+    "accountUuid": "dbda4620-ea67-480e-83a6-30b13d5f1a8d",
+    "emailAddress": "alexander.grieco@dapperlabs.com",
+    "organizationUuid": "f57e6b26-7744-46ae-9fee-4b8ea6e536f5",
+    "hasExtraUsageEnabled": false,
+    "displayName": "Alex",
+    "organizationRole": "developer",
+    "workspaceRole": "workspace_developer",
+    "organizationName": "Dapper Labs"
+  },
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.9",
+  "projects": {
+    "/Users/alex/dapper/sre-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 5,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "values.yaml",
+        "secrets.tf",
+        "kustomization.yaml",
+        "cluster-secrets.yaml",
+        "statefulset.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1768592963256,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 1.67185625,
+      "lastAPIDuration": 456086,
+      "lastAPIDurationWithoutRetries": 456068,
+      "lastToolDuration": 157789,
+      "lastDuration": 3845758,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 158451,
+      "lastTotalOutputTokens": 18718,
+      "lastTotalCacheCreationInputTokens": 228505,
+      "lastTotalCacheReadInputTokens": 1027205,
+      "lastTotalWebSearchRequests": 8,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 158006,
+          "outputTokens": 1331,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.164661
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 445,
+          "outputTokens": 17387,
+          "cacheReadInputTokens": 1027205,
+          "cacheCreationInputTokens": 228505,
+          "webSearchRequests": 8,
+          "costUSD": 1.50719525
+        }
+      },
+      "lastSessionId": "65ae2009-02af-4d5a-9e7e-90bd4a5bd6c1"
+    },
+    "/Users/alex": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 0.1402066,
+      "lastAPIDuration": 45090,
+      "lastAPIDurationWithoutRetries": 45088,
+      "lastToolDuration": 118,
+      "lastDuration": 104771,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 1085,
+      "lastTotalOutputTokens": 1656,
+      "lastTotalCacheCreationInputTokens": 24790,
+      "lastTotalCacheReadInputTokens": 71897,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 1045,
+          "outputTokens": 33,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00121
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 40,
+          "outputTokens": 1623,
+          "cacheReadInputTokens": 71897,
+          "cacheCreationInputTokens": 24790,
+          "webSearchRequests": 0,
+          "costUSD": 0.1389966
+        }
+      },
+      "lastSessionId": "53688afb-0192-4592-9f0b-63ee2ed71715"
+    },
+    "/Users/alex/dapper/nfl-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "firewall.tf",
+        "database.tf",
+        "cluster.tf",
+        "kustomization.yaml",
+        "values.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1768595516044
+    },
+    "/Users/alex/dapper/actions": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 5,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "index.js",
+        "ai-review.sh",
+        "action.yaml",
+        "post-review.cjs",
+        "build-nextjs-prototype-deploy.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1769620536139
+    },
+    "/Users/alex/.dotfiles": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "lsp.lua",
+        "telescope.lua",
+        "remap.lua",
+        "init.lua",
+        "functions.zsh"
+      ],
+      "exampleFilesGeneratedAt": 1768601281086
+    },
+    "/Users/alex/dapper/disney-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "cluster.tf",
+        "secrets.tf",
+        "values.yaml",
+        "firewall.tf",
+        "data.tf"
+      ],
+      "exampleFilesGeneratedAt": 1768603270088
+    },
+    "/Users/alex/dapper/peak-money": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "peakmoney.proto",
+        "server.go",
+        "api.go",
+        "peakmoney_pb.ts",
+        "go.mod"
+      ],
+      "exampleFilesGeneratedAt": 1768608537298
+    },
+    "/Users/alex/dapper/peak-money-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "review-apps-applicationset.yaml",
+        "pam.tf",
+        "firewall.tf",
+        "cluster.tf",
+        "nginx-ingress-hpa.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1769627599035,
+      "hasCompletedProjectOnboarding": true
+    },
+    "/Users/alex/dapper/nba-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "service-accounts.tf",
+        "cluster.tf",
+        "secrets.tf",
+        "kustomization.yaml",
+        "values.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1768931591890
+    },
+    "/Users/alex/dapper/dapper-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "firewall-meetdapper-com.tf",
+        "secrets.tf",
+        "database.tf",
+        "cluster.tf",
+        "iam.tf"
+      ],
+      "exampleFilesGeneratedAt": 1768943310344,
+      "hasCompletedProjectOnboarding": true
+    },
+    "/Users/alex/dapper/dapper-flow-api": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFiles": [
+        "e2e-test.yml",
+        "build-dfa.yml",
+        "action-deployment-rollout-restart.yml",
+        "deploy-production-gen3-all.yml",
+        "deploy-staging.yml"
+      ],
+      "exampleFilesGeneratedAt": 1768944230581
+    },
+    "/Users/alex/dapper": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 0.363834,
+      "lastAPIDuration": 157089,
+      "lastAPIDurationWithoutRetries": 157081,
+      "lastToolDuration": 18316,
+      "lastDuration": 589099,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 15163,
+      "lastTotalOutputTokens": 6729,
+      "lastTotalCacheCreationInputTokens": 17186,
+      "lastTotalCacheReadInputTokens": 625035,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 14944,
+          "outputTokens": 466,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.017273999999999998
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 219,
+          "outputTokens": 6263,
+          "cacheReadInputTokens": 625035,
+          "cacheCreationInputTokens": 17186,
+          "webSearchRequests": 0,
+          "costUSD": 0.34656
+        }
+      },
+      "lastSessionId": "bc8993ba-6b15-4a40-9c27-6bfb30b2e7cb"
+    },
+    "/Users/alex/dapper/atlas-api": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "provider.go",
+        "pack_nft.go",
+        "distributions.go",
+        "router.go",
+        "draws.go"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1769189871780,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 14.305006799999994,
+      "lastAPIDuration": 2658099,
+      "lastAPIDurationWithoutRetries": 2657958,
+      "lastToolDuration": 1098986,
+      "lastDuration": 17855530,
+      "lastLinesAdded": 440,
+      "lastLinesRemoved": 73,
+      "lastTotalInputTokens": 150740,
+      "lastTotalOutputTokens": 112077,
+      "lastTotalCacheCreationInputTokens": 1837240,
+      "lastTotalCacheReadInputTokens": 18705026,
+      "lastTotalWebSearchRequests": 3,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 141133,
+          "outputTokens": 7726,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.17976300000000012
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 9607,
+          "outputTokens": 104351,
+          "cacheReadInputTokens": 18705026,
+          "cacheCreationInputTokens": 1837240,
+          "webSearchRequests": 3,
+          "costUSD": 14.125243799999998
+        }
+      },
+      "lastSessionId": "77519142-0c14-4162-ac6a-ade61267cd6e"
+    },
+    "/Users/alex/dapper/atlas-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "cluster-secrets.yaml",
+        "values.yaml",
+        "cluster.tf",
+        "service-accounts.tf",
+        "deployments.yaml"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1769199545517
+    },
+    "/Users/alex/dapper/ops-ai-infrastructure": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "main.tf",
+        "gcs_bucket.tf",
+        "service-accounts.tf",
+        "atlantis.yaml",
+        "terraform.auto.tfvars"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1769445390207,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.23617480000000002,
+      "lastAPIDuration": 118033,
+      "lastAPIDurationWithoutRetries": 118018,
+      "lastToolDuration": 7838,
+      "lastDuration": 83756503,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 17093,
+      "lastTotalOutputTokens": 4184,
+      "lastTotalCacheCreationInputTokens": 9460,
+      "lastTotalCacheReadInputTokens": 416336,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 16915,
+          "outputTokens": 441,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.019119999999999998
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 178,
+          "outputTokens": 3743,
+          "cacheReadInputTokens": 416336,
+          "cacheCreationInputTokens": 9460,
+          "webSearchRequests": 0,
+          "costUSD": 0.2170548
+        }
+      },
+      "lastSessionId": "77be9c43-5b9a-4fa7-9a59-40970b55ace5"
+    },
+    "/Users/alex/dapper/disney-api": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "deployment-patch.yaml",
+        "ingress.yaml",
+        "externalsecret-disney-api.yaml",
+        "externalsecret-temporal-gsm.yaml",
+        "job-patch.yaml"
+      ],
+      "exampleFilesGeneratedAt": 1769530083217,
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "lastCost": 0.000781,
+      "lastAPIDuration": 993,
+      "lastAPIDurationWithoutRetries": 992,
+      "lastToolDuration": 0,
+      "lastDuration": 21140,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 571,
+      "lastTotalOutputTokens": 42,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 0.68,
+      "lastFpsLow1Pct": 174.04,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 571,
+          "outputTokens": 42,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000781
+        }
+      },
+      "lastSessionId": "5e7b3359-4ed0-47ef-bae8-3387fb210216"
+    },
+    "/Users/alex/dapper/terraform": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "FW-General-lists.tf",
+        "pull-through-cache.tf",
+        "workload-identity-federation.tf",
+        "secrets.tf",
+        "compute.tf"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "exampleFilesGeneratedAt": 1769545710926,
+      "hasCompletedProjectOnboarding": true
+    }
+  },
+  "githubRepoPaths": {
+    "dapperlabs/sre-infrastructure": [
+      "/Users/alex/dapper/sre-infrastructure"
+    ],
+    "dapperlabs/nfl-infrastructure": [
+      "/Users/alex/dapper/nfl-infrastructure"
+    ],
+    "dapperlabs/actions": [
+      "/Users/alex/dapper/actions"
+    ],
+    "alexander-grieco/.dotfiles": [
+      "/Users/alex/.dotfiles"
+    ],
+    "dapperlabs/disney-infrastructure": [
+      "/Users/alex/dapper/disney-infrastructure"
+    ],
+    "dapperlabs/peak-money": [
+      "/Users/alex/dapper/peak-money"
+    ],
+    "dapperlabs/peak-money-infrastructure": [
+      "/Users/alex/dapper/peak-money-infrastructure"
+    ],
+    "dapperlabs/nba-infrastructure": [
+      "/Users/alex/dapper/nba-infrastructure"
+    ],
+    "dapperlabs/dapper-infrastructure": [
+      "/Users/alex/dapper/dapper-infrastructure"
+    ],
+    "dapperlabs/dapper-flow-api": [
+      "/Users/alex/dapper/dapper-flow-api"
+    ],
+    "dapperlabs/atlas-api": [
+      "/Users/alex/dapper/atlas-api"
+    ],
+    "dapperlabs-platform/ops-ai-infrastructure": [
+      "/Users/alex/dapper/ops-ai-infrastructure"
+    ],
+    "dapperlabs/disney-api": [
+      "/Users/alex/dapper/disney-api"
+    ],
+    "dapperlabs-platform/terraform": [
+      "/Users/alex/dapper/terraform"
+    ],
+    "dapperlabs-platform/actions": [
+      "/Users/alex/dapper/actions"
+    ]
+  },
+  "lastReleaseNotesSeen": "2.1.22",
+  "hasShownOpus45Notice": {
+    "f57e6b26-7744-46ae-9fee-4b8ea6e536f5": true
+  },
+  "s1mNonSubscriberAccessCache": {
+    "f57e6b26-7744-46ae-9fee-4b8ea6e536f5": {
+      "hasAccess": true,
+      "timestamp": 1769627598487
+    }
+  },
+  "autoUpdatesProtectedForNative": true,
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "lastPlanModeUse": 1769122815188,
+  "skillUsage": {
+    "using-git-worktrees": {
+      "usageCount": 2,
+      "lastUsedAt": 1769118971169
+    },
+    "superpowers:using-git-worktrees": {
+      "usageCount": 3,
+      "lastUsedAt": 1769191937834
+    },
+    "superpowers:execute-plan": {
+      "usageCount": 1,
+      "lastUsedAt": 1769116590708
+    },
+    "superpowers:brainstorming": {
+      "usageCount": 2,
+      "lastUsedAt": 1769199884815
+    },
+    "superpowers:writing-plans": {
+      "usageCount": 1,
+      "lastUsedAt": 1769192018134
+    },
+    "superpowers:subagent-driven-development": {
+      "usageCount": 1,
+      "lastUsedAt": 1769192091823
+    },
+    "superpowers:finishing-a-development-branch": {
+      "usageCount": 1,
+      "lastUsedAt": 1769192913079
     }
   }
 }

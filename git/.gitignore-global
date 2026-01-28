@@ -1,5 +1,7 @@
 **.DS_Store
 
+*-secret.zsh
+
 **/.claude/cache/
 **/.claude/debug/
 **/.claude/projects/
@@ -8,3 +10,9 @@
 **/.claude/todos/
 **/.claude/ide/
 **/.claude/history.jsonl
+**/.claude/tasks/
+**/.claude/plugins/cache/
+**/.claude/paste-cache/
+**/.claude/file-history/
+
+/.claude

@@ -14,10 +14,10 @@
     "infrastructure@dapper-claude-code-plugins": [
       {
         "scope": "user",
-        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/infrastructure/2.0.0",
-        "version": "2.0.0",
+        "installPath": "/Users/alex/.claude/plugins/cache/dapper-claude-code-plugins/infrastructure/2.1.0",
+        "version": "2.1.0",
         "installedAt": "2026-01-16T16:03:59.418Z",
-        "lastUpdated": "2026-01-16T16:03:59.418Z",
+        "lastUpdated": "2026-01-20T15:37:19.370Z",
         "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
       }
     ],
@@ -79,6 +79,16 @@
         "installedAt": "2026-01-16T17:41:50.857Z",
         "lastUpdated": "2026-01-16T17:41:50.857Z",
         "gitCommitSha": "b9a6b5f5b9e778afbeec8fbfa28b2e2e7d5b9202"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/alex/.claude/plugins/cache/claude-plugins-official/superpowers/4.1.1",
+        "version": "4.1.1",
+        "installedAt": "2026-01-22T18:47:26.920Z",
+        "lastUpdated": "2026-01-23T22:51:29.920Z",
+        "gitCommitSha": "a01a135fe185559ff9dc84dd70d6e9bb57d92bdf"
       }
     ]
   }

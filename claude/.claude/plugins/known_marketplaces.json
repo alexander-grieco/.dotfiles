@@ -5,7 +5,15 @@
       "repo": "dapperlabs/dapper-claude-code-plugins"
     },
     "installLocation": "/Users/alex/.claude/plugins/marketplaces/dapper-claude-code-plugins",
-    "lastUpdated": "2026-01-16T17:59:44.060Z",
+    "lastUpdated": "2026-01-27T20:34:08.672Z",
     "autoUpdate": true
+  },
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/alex/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-01-23T17:40:42.606Z"
   }
 }
