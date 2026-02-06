@@ -9,6 +9,13 @@ return {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
         gopls = {},
+        html = {
+          filetypes = { "html", "astro" },
+        },
+        css = {
+          filetypes = { "html", "css", "astro" },
+        },
+        astro = {},
         rust_analyzer = {},
         tflint = {},
         jqls = {},
