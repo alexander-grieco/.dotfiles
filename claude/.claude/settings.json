@@ -9,5 +9,6 @@
     "product@dapper-claude-code-plugins": true,
     "kaaos@dapper-claude-code-plugins": true,
     "superpowers@claude-plugins-official": true
-  }
+  },
+  "model": "opus[1m]"
 }

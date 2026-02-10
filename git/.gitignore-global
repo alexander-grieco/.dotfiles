@@ -14,5 +14,7 @@
 **/.claude/plugins/cache/
 **/.claude/paste-cache/
 **/.claude/file-history/
+**/.claude/plugins/
+**/.claude/stats-cache.json
 
 /.claude
