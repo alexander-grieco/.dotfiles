@@ -1,0 +1,218 @@
+{
+  "cesp_version": "1.0",
+  "name": "deadpool",
+  "display_name": "Deadpool (2016)",
+  "version": "1.0.0",
+  "description": "Maximum effort! Audio clips from Deadpool (2016) featuring Ryan Reynolds' iconic one-liners.",
+  "author": {
+    "name": "victor",
+    "github": "xtrimsystems"
+  },
+  "license": "CC-BY-NC-4.0",
+  "language": "en",
+  "categories": {
+    "session.start": {
+      "sounds": [
+        {
+          "file": "sounds/Maximum_effort.mp3",
+          "label": "Maximum effort.",
+          "sha256": "399526c066fdfaa04495c2c01c398efb380db5467f4ae2e17b13c39747848258"
+        },
+        {
+          "file": "sounds/Did_I_say_this_was_a_love_story.mp3",
+          "label": "Did I say this was a love story?",
+          "sha256": "9fb791f1e692fda9712440ab0926464e2a4a3d42b14fb9cb2fb38527a6ee3fc5"
+        },
+        {
+          "file": "sounds/Captain_Deadpool.mp3",
+          "label": "Captain Deadpool...",
+          "sha256": "efcf82872f48affe7ffadab682f600d4359cbdedd6dbbf2c1077891dc16215f5"
+        },
+        {
+          "file": "sounds/And_I_m_after_someone_on_my_naughty_list.mp3",
+          "label": "And I'm after someone on my naughty list.",
+          "sha256": "5c1d7fda5c78a51d9158029ecc659c6c4246ac81b3f2829591ab9735422871d6"
+        },
+        {
+          "file": "sounds/I_m_just_a_bad_guy_who_gets_paid_to_fuck_up_worse_guys.mp3",
+          "label": "I'm just a bad guy who gets paid to fuck up worse guys.",
+          "sha256": "4bfc250b14ca03a3edb052efa9f27109e6b8e2a6320961c3efb47bef7880ce31"
+        }
+      ]
+    },
+    "task.acknowledge": {
+      "sounds": [
+        {
+          "file": "sounds/Fuck_it_I_got_this.mp3",
+          "label": "Fuck it. I got this.",
+          "sha256": "32d9b77dae52805c786123567ff65206a0feae6c1b371a4d6b3d9161034601c7"
+        },
+        {
+          "file": "sounds/Deal.mp3",
+          "label": "Deal.",
+          "sha256": "3742658cbae2fc36d9eaf0d37ee7306bd3fbea0b3faa927d227fe0ccbfdb58bd"
+        },
+        {
+          "file": "sounds/It_s_time_to_put_balls_in_holes.mp3",
+          "label": "It's time to put balls in holes.",
+          "sha256": "5ab6918dcce9bea1f448ce0dd68f0d1d7bee4f65694121b45c5e5cd90ac3b328"
+        },
+        {
+          "file": "sounds/Commando.mp3",
+          "label": "Commando!",
+          "sha256": "7fc34720189f9f45092ef07db85235985738b57141075896ab1950e4fab6ff1b"
+        },
+        {
+          "file": "sounds/Let_s_try_to_kill_each_other.mp3",
+          "label": "Let's try to kill each other.",
+          "sha256": "21ab383e14d4c611eb190e74391e6aa61cc55b1ccdcc46001f284f93fba5642a"
+        }
+      ]
+    },
+    "task.complete": {
+      "sounds": [
+        {
+          "file": "sounds/I_m_touching_myself_tonight.mp3",
+          "label": "I'm touching myself tonight.",
+          "sha256": "9501d6c5c38e5081ae66f9802b3130ad8cc2897140ad2120a4c4e53ede8a0847"
+        },
+        {
+          "file": "sounds/It_s_over_Go_home.mp3",
+          "label": "It's over. Go home.",
+          "sha256": "b5c5bba9a1e086e2627df6c4d6815799a1048161059ccfc2b367ba2a0984d651"
+        },
+        {
+          "file": "sounds/Cock_shot.mp3",
+          "label": "Cock shot!",
+          "sha256": "c9d19446a6ab0f6599cd58eba8ea9094aa23b00845949334b1d8a79f83b69807"
+        },
+        {
+          "file": "sounds/Do_you_like_what_you_see.mp3",
+          "label": "Do you like what you see?",
+          "sha256": "b308b65fcad1fe985343b662db3d9969a998a972e6053bdf3116036edc66cedd"
+        },
+        {
+          "file": "sounds/Balls_in_holes.mp3",
+          "label": "Balls in holes.",
+          "sha256": "34eeedcde5089550e04215a697818977d4ac36ff8b0a321262f1961e96444fee"
+        }
+      ]
+    },
+    "task.error": {
+      "sounds": [
+        {
+          "file": "sounds/I_think_we_can_all_agree_that_shit_just_went_sideways.mp3",
+          "label": "I think we can all agree that shit just went sideways",
+          "sha256": "4f4ea33e3e5671db04871d567de25ca2680ac85ce40067ce8b79559e5dc0e898"
+        },
+        {
+          "file": "sounds/God_damn_it.mp3",
+          "label": "God damn it!",
+          "sha256": "580212a1cca1b5151bdeb4ab0fbc673e6821245bbdd67586c7608db0e60e4566"
+        },
+        {
+          "file": "sounds/Negasonic_Teenage_What_the_shit.mp3",
+          "label": "Negasonic Teenage... What the shit?",
+          "sha256": "ee226a7d981347a621d13eccb6ff5e8c5c6fe01014c35ea695869eb985a84518"
+        },
+        {
+          "file": "sounds/Did_I_leave_the_stove_on.mp3",
+          "label": "Did I leave the stove on?",
+          "sha256": "57a76a2650811c5c66cd36a811494589dbda41fe3e557cfb31a9f5a109af8353"
+        },
+        {
+          "file": "sounds/Fuck_me.mp3",
+          "label": "Fuck me!",
+          "sha256": "9980236cce82441dc2aec143f12fea2e15a3c1aca9e3c5d2dcb3e7be0509ae63"
+        }
+      ]
+    },
+    "input.required": {
+      "sounds": [
+        {
+          "file": "sounds/Oh_hello_I_know_right.mp3",
+          "label": "Oh, hello. I know, right?",
+          "sha256": "39f307a0869296d65e0f47f94954f2dfa4481c50fff2fc41e192d9304924e526"
+        },
+        {
+          "file": "sounds/Ding_ding.mp3",
+          "label": "Ding ding!",
+          "sha256": "2613f314654d0c7a34d1bd45eaa60580aedec55188a85075d4cf91010b3d9952"
+        },
+        {
+          "file": "sounds/Don_t_make_me_ask_twice.mp3",
+          "label": "Don't make me ask twice.",
+          "sha256": "571d1095cd90b51ecfc0c3a769ee407e2802859bb555fcfcc793bfbe68db0003"
+        },
+        {
+          "file": "sounds/Leave_a_message_and_have_a_happy_day.mp3",
+          "label": "Leave a message and have a happy day.",
+          "sha256": "79c7f4405855683c75b4fd38365e1bcb3e111db0b6d2af5046b3eba569feb3cb"
+        },
+        {
+          "file": "sounds/I_m_gonna_wait_out_here_okay.mp3",
+          "label": "I'm gonna wait out here, okay?",
+          "sha256": "44ce32e512e9c4f3ba6ca876b33875e77c8375c145fe593aa9d87da200f97f0d"
+        }
+      ]
+    },
+    "resource.limit": {
+      "sounds": [
+        {
+          "file": "sounds/Like_a_testicle_with_teeth.mp3",
+          "label": "Like a testicle with teeth.",
+          "sha256": "3f19e0d6383638c82ee2bcb38bf86734ec1a88c611cdee413dbf1a3fcf268c2e"
+        },
+        {
+          "file": "sounds/Had_sex_with_an_older_more_disgusting_avocado.mp3",
+          "label": "Had sex with an older, more disgusting avocado.",
+          "sha256": "4df30b7454c3a1dfb3cdef8d68031c9dbf3948283d472828b78d21af3d06a998"
+        },
+        {
+          "file": "sounds/Nope_Never_will_be.mp3",
+          "label": "Nope. Never will be.",
+          "sha256": "0613b262304721ebd142c2fe6d260181488c83e8e097d33422990fefc4701635"
+        },
+        {
+          "file": "sounds/Nobody_wins_today.mp3",
+          "label": "Nobody wins today.",
+          "sha256": "c56a559031004930d3b4dbb1e7c8292a2dd948887dbc59f094659ff53de686e8"
+        },
+        {
+          "file": "sounds/I_tried_the_hero_business_and_it_left_a_mark.mp3",
+          "label": "I tried the hero business and it left a mark.",
+          "sha256": "4142f74533029f50663b23249159f15fb40c79061d7c65f83d7a6c0b10401a76"
+        }
+      ]
+    },
+    "user.spam": {
+      "sounds": [
+        {
+          "file": "sounds/Motherfucker_you_re_the_world_s_worst_friend.mp3",
+          "label": "Motherfucker, you're the world's worst friend.",
+          "sha256": "548ce5cb246c807b47ce477ca2473e8e61e534a50807772f8c27982a2bf66bf2"
+        },
+        {
+          "file": "sounds/Bad_Deadpool.mp3",
+          "label": "Bad Deadpool.",
+          "sha256": "fb5b16b06046e8a00f604b00c40d506f78fa438acb86b33529ad0eb2bf975b99"
+        },
+        {
+          "file": "sounds/No_no_no_no_That_I_ain_t.mp3",
+          "label": "No no no no. That I ain't!",
+          "sha256": "bccce46ce523a103d37a4df7c9e605da2020e7bb5ba1bd8a4b8c4beaaf558ced"
+        },
+        {
+          "file": "sounds/But_you_did_asshole.mp3",
+          "label": "But you did, asshole!",
+          "sha256": "bcdf95248adf7d96f0135e8c4e5af460be439e839f62029ef8a50c9934344ca3"
+        },
+        {
+          "file": "sounds/I_ve_been_trying_to_tell_you_assholes.mp3",
+          "label": "I've been trying to tell you assholes,",
+          "sha256": "57b7adbac7a40e4590950e955cc60b59774e645417d596d30446ff6cdfe8a48f"
+        }
+      ]
+    }
+  }
+}

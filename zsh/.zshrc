@@ -44,3 +44,7 @@ esac
 # kubectl completions
 # If you get tired of slowness: kubectl completion zsh;
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# peon-ping quick controls
+alias peon="bash /Users/alex/.claude/hooks/peon-ping/peon.sh"
+[ -f /Users/alex/.claude/hooks/peon-ping/completions.bash ] && source /Users/alex/.claude/hooks/peon-ping/completions.bash

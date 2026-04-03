@@ -11,7 +11,10 @@
       "Bash(sesh connect --help:*)",
       "Bash(sesh list:*)",
       "Bash(tmux list-sessions:*)",
-      "Bash(sesh connect:*)"
+      "Bash(sesh connect:*)",
+      "Bash(git:*)",
+      "Bash(node:*)",
+      "Bash(echo $CLAUDE_SESSION_ID:*)"
     ]
   }
 }

@@ -17,5 +17,11 @@
 **/.claude/plugins/
 **/.claude/stats-cache.json
 **/.claude.json
+**/.claude/telemetry
 
 /.claude
+
+.omc
+
+# Netovim
+**/nvim/lazy-lock.json

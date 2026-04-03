@@ -10,18 +10,14 @@ date >> /tmp/sesh-startup.log
 SESSION=$(tmux display-message -p '#S')
 echo "Session name: $SESSION" >> /tmp/sesh-startup.log
 
-# Window 1: Claude Code
-tmux rename-window -t $SESSION:1 "claude"
-tmux send-keys -t $SESSION:1 "claude" C-m
+# Window 1: Neovim
+tmux rename-window -t $SESSION:1 "editor"
+tmux send-keys -t $SESSION:1 "nvim ." C-m
 
-# Window 2: Neovim
-tmux new-window -t $SESSION:2 -n "editor"
-tmux send-keys -t $SESSION:2 "nvim ." C-m
+# Window 2: Terminal
+tmux new-window -t $SESSION:2 -n "terminal"
 
-# Window 3: Terminal
-tmux new-window -t $SESSION:3 -n "terminal"
-
-# Select the first window (Claude Code)
+# Select the editor window
 tmux select-window -t $SESSION:1
 
 echo "Sesh startup script completed" >> /tmp/sesh-startup.log
