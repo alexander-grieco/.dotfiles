@@ -59,19 +59,24 @@
             "zsh"
           ];
           casks = [
+            "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
             "ghostty"
+            "linearmouse"
             "nextcloud"
             "notion"
             "notion-calendar"
             "raycast"
             "rectangle"
+            "shottr"
             "the-unarchiver"
-            "zen-browser"
+            "typewhisper/tap/typewhisper"
+            "zen"
           ];
           masApps = {
             "Tailscale" = 1475387142;
+            "Due" = 524373870;
           };
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
@@ -94,14 +99,17 @@
             persistent-apps = [
               "/System/Applications/System Settings.app"
               "/Applications/Notion Calendar.app"
-              "/Applications/Zen Browser.app/"
+              "/Applications/Zen.app/"
               "/Applications/Ghostty.app"
+              "/Applications/1password.app"
+              "/Applications/Due.app"
             ];
             wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver
           };
           finder = {
             AppleShowAllFiles = true; # Show hidden files
             FXPreferredViewStyle = "clmv"; # Default view: column view
+            NewWindowTarget = "Documents"; # New windows default to "Documents" folder
             QuitMenuItem = true; # Allow quitting Finder app
             ShowPathbar = true; # Show path breadcrumbs in finder windows
             _FXSortFoldersFirst = true; # Show folders first when sorting by name
@@ -120,13 +128,18 @@
           NSGlobalDomain = {
             AppleICUForce24HourTime = true; # Use 24hr time format
             AppleShowAllFiles = true; # Show hidden files
+            AppleSpacesSwitchOnActivate = false;
             "com.apple.swipescrolldirection" = false; # Disable "natural" scroll direction
             KeyRepeat = 2;
+            NSWindowShouldDragOnGesture = true;
+          };
+          WindowManager = {
+            EnableTilingByEdgeDrag = false;
           };
         };
         keyboard = {
           enableKeyMapping = true; # Enable keymap settings
-          remapCapsLockToEscape = true; # Make capslock another escape key (handy for laptop keyboards)
+          # remapCapsLockToEscape = true; # Make capslock another escape key (handy for laptop keyboards)
         };
       };
 
