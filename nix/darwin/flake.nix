@@ -48,6 +48,7 @@
             "neovim"
             "nmap"
             "node"
+	    "pyenv"
             "rg"
             "sesh"
             "stow"
@@ -144,8 +145,8 @@
         };
       };
 
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      # Use Determinate installer config
+      nix.enable = false;
 
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;  # default shell on catalina
