@@ -59,10 +59,12 @@
             "zsh"
           ];
           casks = [
+            "1password"
             "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
             "ghostty"
+            "hyperkey"
             "linearmouse"
             "nextcloud"
             "notion"
@@ -70,7 +72,6 @@
             "raycast"
             "rectangle"
             "shottr"
-            "the-unarchiver"
             "typewhisper/tap/typewhisper"
             "zen"
           ];
@@ -128,10 +129,10 @@
           NSGlobalDomain = {
             AppleICUForce24HourTime = true; # Use 24hr time format
             AppleShowAllFiles = true; # Show hidden files
-            AppleSpacesSwitchOnActivate = false;
+            AppleSpacesSwitchOnActivate = false; # Dont switch workspace when selecting application with open windows
             "com.apple.swipescrolldirection" = false; # Disable "natural" scroll direction
             KeyRepeat = 2;
-            NSWindowShouldDragOnGesture = true;
+            # NSWindowShouldDragOnGesture = true; # Not sure this works
           };
           WindowManager = {
             EnableTilingByEdgeDrag = false;
