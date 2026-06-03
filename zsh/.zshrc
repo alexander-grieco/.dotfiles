@@ -12,7 +12,6 @@ fi
 [[ -f ~/.zsh/exports.zsh ]] && source ~/.zsh/exports.zsh
 [[ -f ~/.zsh/export-secret.zsh ]] && source ~/.zsh/export-secret.zsh
 [[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
-[[ -f ~/.zsh/znap.zsh ]] && source ~/.zsh/znap.zsh
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/gcp.zsh ]] && source ~/.zsh/gcp.zsh
 
@@ -23,10 +22,19 @@ else
   echo "Be sure to set GITHUB_EMAIL env var and re-source"
 fi
 
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
+# Completions
+autoload -Uz compinit
+compinit
 
-autoload -U +X bashcompinit && bashcompinit
+autoload -U +X bashcompinit
+bashcompinit
+
+complete -C "$(command -v aws_completer)" aws
+# Completions end
+#
+# Apparently this needs to come after the completion config above
+[[ -f ~/.zsh/znap.zsh ]] && source ~/.zsh/znap.zsh
+
 
 eval "$(zoxide init zsh)"
 

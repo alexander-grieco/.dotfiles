@@ -22,4 +22,4 @@ nix shell nixpkgs#stow
 
 # Command to Build Configuration After First Time
 
-`darwin-rebuild switch --flake .#air`
+`sudo darwin-rebuild switch --flake .#air`

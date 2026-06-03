@@ -20,13 +20,14 @@
         [
             pkgs.tmux
             pkgs.obsidian
-            pkgs.terraform
+            # pkgs.terraform
         ];
 
         homebrew = {
           enable = true;
           taps = [
             "jesseduffield/lazygit"
+            "hashicorp/tap"
           ];
           brews = [
             "coreutils"
@@ -38,6 +39,7 @@
             "fzf"
             "gh"
             "go"
+            "hashicorp/tap/terraform"
             "jesseduffield/lazygit/lazygit"
             "kubectx"
             "kustomize"
@@ -48,14 +50,17 @@
             "neovim"
             "nmap"
             "node"
-	    "pyenv"
+            "pi-coding-agent"
+      	    "pyenv"
             "rg"
             "sesh"
             "stow"
+            "tailscale"
             "tmux"
             "tree-sitter"
             "vim"
             "wget"
+            "wireguard-tools"
             "zoxide"
             "zsh"
           ];
@@ -64,6 +69,7 @@
             "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
+            "google-cloud-sdk"
             "ghostty"
             "hyperkey"
             "linearmouse"
@@ -77,7 +83,7 @@
             "zen"
           ];
           masApps = {
-            "Tailscale" = 1475387142;
+            # "Tailscale" = 1475387142;
             "Due" = 524373870;
           };
           onActivation.autoUpdate = true;

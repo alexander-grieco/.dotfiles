@@ -97,51 +97,15 @@ return {
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-        default = { "supermaven", "lsp", "path", "snippets", "buffer" },
+        default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = {
+          ["pi-chat-prompt"] = { "pi" },
+        },
         providers = {
-          supermaven = {
-            name = "supermaven",
-            module = "blink.compat.source",
-            async = true,
-            score_offset = 10000000,
-          },
+          pi = { name = "Pi", module = "pi.completion.blink" },
           lsp = {
             score_offset = 10000,
           },
-          -- copilot = {
-          --   name = "copilot",
-          --   module = "blink-cmp-copilot",
-          --   score_offset = -100,
-          --   async = true,
-          --   transform_items = function(_, items)
-          --     local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
-          --     local kind_idx = #CompletionItemKind + 1
-          --     CompletionItemKind[kind_idx] = "Copilot"
-          --     for _, item in ipairs(items) do
-          --       item.kind = kind_idx
-          --     end
-          --     return items
-          --   end,
-          -- },
-          -- Avante completion for when this works
-          -- avante_commands = {
-          --   name = "avante_commands",
-          --   module = "blink.compat.source",
-          --   score_offset = -90,
-          --   opts = {},
-          -- },
-          -- avante_files = {
-          --   name = "avante_commands",
-          --   module = "blink.compat.source",
-          --   score_offset = -100,
-          --   opts = {},
-          -- },
-          -- avante_mentions = {
-          --   name = "avante_mentions",
-          --   module = "blink.compat.source",
-          --   score_offset = -1000,
-          --   opts = {},
-          -- },
         },
       },
 

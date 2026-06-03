@@ -59,6 +59,20 @@ return {
       extensions = {
         live_grep_args = {
           auto_quoting = true, -- enable/disable auto-quoting
+          path_display = {
+            shorten = {
+              len = 2,
+              exclude = { -1, -2, -3 },
+            },
+          },
+          layout_strategy = "horizontal",
+          layout_config = {
+            width = 0.95,
+            height = 0.95,
+            horizontal = {
+              preview_width = 0.60,
+            },
+          },
           mappings = { -- extend mappings
             i = {
               ["<C-i>"] = lga_actions.quote_prompt(),

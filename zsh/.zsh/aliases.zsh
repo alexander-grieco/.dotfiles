@@ -42,12 +42,10 @@ alias tf="terraform"
 # GCP
 alias gcc="gcloud container clusters"
 
-# Dapper Specific
-alias ips="kubectl port-forward svc/gips 8080:8080"
-alias cips="curl http://localhost:8080/api/v1/projects"
-
-# Special ssh
+# ssh
 alias qssh="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+# alias servers="cat ~/.ssh/config | grep \"Host \" | cut -d \" \" -f 2 | sort"
+alias servers='awk '\''function flush(){for(i=1;i<=n;i++)if(hosts[i]!="*")print hosts[i],(ip?ip:hosts[i])} $1=="Host"{if(n)flush(); n=0; ip=""; for(i=2;i<=NF;i++)hosts[++n]=$i} $1=="HostName"{ip=$2} END{if(n)flush()}'\'' ~/.ssh/config'
 
 # zellij
 alias zj="zellij"
@@ -68,7 +66,7 @@ function sesh-sessions() {
       --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
       --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c)' \
       --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' \
-      --bind 'ctrl-f:change-prompt(🔎  )+reload(find ~ ~/Documents/B_Product_Development ~/Nextcloud/Development ~/Nextcloud/Development/golang/alexander-grieco ~/dapper ~/Documents/H_Personal_Admin/ -mindepth 1 -maxdepth 1 -type d )' \
+      --bind 'ctrl-f:change-prompt(🔎  )+reload(find ~ ~/Documents/B_Product_Development ~/Nextcloud/Development ~/Nextcloud/Development/golang/alexander-grieco ~/fp ~/Documents/H_Personal_Admin/ -mindepth 1 -maxdepth 1 -type d )' \
       --bind 'ctrl-t:change-prompt(🪟  )+reload(sesh list -t)' \
       --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list)'
     )

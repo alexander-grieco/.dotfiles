@@ -5,7 +5,7 @@
 ##
 # Load your plugins with `znap source`.
 #
-znap source marlonrichert/zsh-autocomplete
+# znap source marlonrichert/zsh-autocomplete
 znap source marlonrichert/zsh-edit
 
 # No special syntax is needed to configure plugins. Just use normal Zsh
@@ -43,11 +43,11 @@ znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
 # ZSH Configs
 ############################################################################################################################################
 # To get rid of annoying part in prompt
-DEFAULT_USER=`whoami`
+DEFAULT_USER=$(whoami)
 DISABLE_MAGIC_FUNCTIONS=true
 
-#### gopass configuration
-export GPG_TTY=$(tty)
+# #### gopass configuration
+# export GPG_TTY=$(tty)
 
 # removing stupid pasting thing
-zstyle ':urlglobber' url-other-schema
+zstyle ':urlglobber' url-other-schema ''
