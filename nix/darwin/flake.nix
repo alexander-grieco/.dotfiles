@@ -32,6 +32,7 @@
             { name = "danielfoehrkn/switch"; trusted = true; }
             { name = "dopplerhq/cli"; trusted = true; }
             { name = "typewhisper/tap"; trusted = true; }
+            { name = "aws/tap"; trusted = true; }
           ];
           brews = [
             "coreutils"
@@ -39,6 +40,7 @@
             "dlv"
             "docker"
             { name = "dopplerhq/cli/doppler"; trusted = true; }
+            { name = "aws/tap/ec2-instance-selector"; trusted = true; }
             "etcd"
             "fd"
             "fzf"
