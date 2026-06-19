@@ -28,19 +28,24 @@
           taps = [
             "jesseduffield/lazygit"
             "hashicorp/tap"
+            { name = "hashicorp/tap"; trusted = true; }
+            { name = "danielfoehrkn/switch"; trusted = true; }
+            { name = "dopplerhq/cli"; trusted = true; }
+            { name = "typewhisper/tap"; trusted = true; }
           ];
           brews = [
             "coreutils"
-            "danielfoehrkn/switch/switch"
+            { name = "danielfoehrkn/switch/switch"; trusted = true; }
             "dlv"
             "docker"
+            { name = "dopplerhq/cli/doppler"; trusted = true; }
             "etcd"
             "fd"
             "fzf"
             "gh"
             "go"
-            "hashicorp/tap/terraform"
-            "jesseduffield/lazygit/lazygit"
+            { name = "hashicorp/tap/terraform"; trusted = true; }
+            { name = "jesseduffield/lazygit/lazygit"; trusted = true; }
             "kubectx"
             "kustomize"
             "libsigc++"
@@ -69,7 +74,7 @@
             "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
-            "google-cloud-sdk"
+            "gcloud-cli"
             "ghostty"
             "hyperkey"
             "linearmouse"
@@ -79,12 +84,11 @@
             "raycast"
             "rectangle"
             "shottr"
-            "typewhisper/tap/typewhisper"
             "zen"
           ];
           masApps = {
             # "Tailscale" = 1475387142;
-            "Due" = 524373870;
+            # "Due" = 524373870; # <- only available on my main Apple account
           };
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
