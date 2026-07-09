@@ -14,8 +14,7 @@
       "WebSearch",
       "Task",
       "NotebookEdit",
-      "EnterWorktree",
-      "mcp__*"
+      "EnterWorktree"
     ]
   },
   "model": "opus[1m]",
@@ -175,7 +174,7 @@
     "ai@dapper-claude-code-plugins": true,
     "hephaestus@dapper-claude-code-plugins": true,
     "code-review@claude-code-plugins": true,
-    "github@claude-plugins-official": true,
+    "github@claude-plugins-official": false,
     "agent-sdk-dev@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "claude-code-setup@claude-plugins-official": true,
@@ -196,5 +195,6 @@
     "delphi@dapper-claude-code-plugins": true,
     "socrates-product-advisor@dapper-claude-code-plugins": true
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "theme": "dark"
 }

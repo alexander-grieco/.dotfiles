@@ -1,6 +1,8 @@
 return {
   "alex35mil/pi.nvim",
 
+  lazy = false,
+
   -- Optional: required only for `:PiPasteImage` (clipboard image paste).
   dependencies = { "HakonHarnes/img-clip.nvim" },
 

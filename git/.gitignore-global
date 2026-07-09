@@ -18,6 +18,14 @@
 **/.claude/stats-cache.json
 **/.claude.json
 **/.claude/telemetry
+**/.claude/.last-cleanup
+**/.claude/backups/
+**/.claude/daemon/
+**/.claude/daemon.log
+**/.claude/jobs/
+**/.claude/mcp-needs-auth-cache.json
+**/.claude/security/
+**/.claude/sessions/
 
 /.claude
 

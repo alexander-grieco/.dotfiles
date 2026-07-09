@@ -73,6 +73,7 @@
           ];
           casks = [
             "1password"
+            "claude-code"
             "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
