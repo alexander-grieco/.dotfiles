@@ -38,3 +38,6 @@
 nvim.log
 
 **.log
+
+# Herdr
+config/.config/herdr/session.json
