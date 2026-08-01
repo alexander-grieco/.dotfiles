@@ -1,0 +1,27 @@
+repo = "*"
+
+working_dir = "."
+
+[[tabs]]
+name = "nvim"
+command = '''
+ set -e
+
+herdr pane rename "$HERDR_PANE_ID" nvim >/dev/null
+
+claude_pane="$(
+  herdr pane split --current \
+    --direction right \
+    --ratio 0.70 \
+    --no-focus |
+  jq -er '.result.pane.pane_id'
+)"
+
+herdr pane rename "$claude_pane" claude
+herdr pane run "$claude_pane" " claude"
+
+exec nvim .
+'''
+
+[[tabs]]
+name = "term"

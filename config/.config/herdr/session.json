@@ -2,81 +2,22 @@
   "version": 3,
   "workspaces": [
     {
-      "id": "wX",
-      "custom_name": "dir: .dotfiles",
-      "identity_cwd": "/Users/alex/.dotfiles",
-      "public_pane_numbers": {
-        "37": 2,
-        "38": 3,
-        "36": 1
-      },
-      "next_public_pane_number": 11,
-      "public_tab_numbers": [
-        1,
-        2
-      ],
-      "next_public_tab_number": 3,
-      "tabs": [
-        {
-          "custom_name": "nvim",
-          "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.7,
-              "first": {
-                "Pane": 36
-              },
-              "second": {
-                "Pane": 38
-              }
-            }
-          },
-          "panes": {
-            "38": {
-              "cwd": "/Users/alex/.dotfiles",
-              "label": "claude",
-              "agent_session": {
-                "source": "herdr:claude",
-                "agent": "claude",
-                "kind": "id",
-                "value": "c9907f2a-5b4d-4a56-ba3a-3a200afb1ae0"
-              }
-            },
-            "36": {
-              "cwd": "/Users/alex/.dotfiles"
-            }
-          },
-          "zoomed": false,
-          "focused": 36,
-          "root_pane": 36
-        },
-        {
-          "custom_name": "term",
-          "layout": {
-            "Pane": 37
-          },
-          "panes": {
-            "37": {
-              "cwd": "/Users/alex/.dotfiles"
-            }
-          },
-          "zoomed": false,
-          "focused": 37,
-          "root_pane": 37
-        }
-      ],
-      "active_tab": 0
-    },
-    {
       "id": "w0",
       "custom_name": "dir: theo-infra",
       "identity_cwd": "/Users/alex/fp/theo-infra",
-      "public_pane_numbers": {
-        "53": 2,
-        "55": 4,
-        "54": 3
+      "worktree_space": {
+        "key": "/Users/alex/fp/theo-infra/.git",
+        "label": "theo-infra",
+        "repo_root": "/Users/alex/fp/theo-infra",
+        "checkout_path": "/Users/alex/fp/theo-infra",
+        "is_linked_worktree": false
       },
-      "next_public_pane_number": 6,
+      "public_pane_numbers": {
+        "55": 4,
+        "54": 3,
+        "53": 2
+      },
+      "next_public_pane_number": 7,
       "public_tab_numbers": [
         1,
         2
@@ -132,10 +73,77 @@
         }
       ],
       "active_tab": 0
+    },
+    {
+      "id": "w11",
+      "custom_name": "dir: .dotfiles",
+      "identity_cwd": "/Users/alex/.dotfiles",
+      "public_pane_numbers": {
+        "62": 1,
+        "63": 2,
+        "64": 3
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": "nvim",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.7,
+              "first": {
+                "Pane": 62
+              },
+              "second": {
+                "Pane": 64
+              }
+            }
+          },
+          "panes": {
+            "64": {
+              "cwd": "/Users/alex/.dotfiles",
+              "label": "claude",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "7eb8a07b-f713-4de3-9c2e-e6b43f955c5b"
+              }
+            },
+            "62": {
+              "cwd": "/Users/alex/.dotfiles",
+              "label": "nvim"
+            }
+          },
+          "zoomed": false,
+          "focused": 62,
+          "root_pane": 62
+        },
+        {
+          "custom_name": "term",
+          "layout": {
+            "Pane": 63
+          },
+          "panes": {
+            "63": {
+              "cwd": "/Users/alex/.dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 63,
+          "root_pane": 63
+        }
+      ],
+      "active_tab": 0
     }
   ],
-  "active": 0,
-  "selected": 0,
+  "active": 1,
+  "selected": 1,
   "sidebar_width": 20,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []
