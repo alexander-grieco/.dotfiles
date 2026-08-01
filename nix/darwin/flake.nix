@@ -6,9 +6,10 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew"; # May need to update - note "wip" label
+    herdr.url = "github:ogulcancelik/herdr/v0.7.5";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = { self, nix-darwin, nixpkgs, nix-homebrew, herdr, }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -20,21 +21,26 @@
         [
             pkgs.tmux
             pkgs.obsidian
-            # pkgs.terraform
+            pkgs.proton-pass
+            herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
         ];
 
         homebrew = {
           enable = true;
           taps = [
             "jesseduffield/lazygit"
-            "hashicorp/tap"
+
             { name = "hashicorp/tap"; trusted = true; }
+            "dopplerhq/cli"
             { name = "danielfoehrkn/switch"; trusted = true; }
-            { name = "dopplerhq/cli"; trusted = true; }
             { name = "typewhisper/tap"; trusted = true; }
             { name = "aws/tap"; trusted = true; }
+            {name = "lmilojevicc/tap"; trusted = true;}
           ];
+
           brews = [
+            "bat"
+            "oven-sh/bun/bun"
             "coreutils"
             { name = "danielfoehrkn/switch/switch"; trusted = true; }
             "dlv"
@@ -42,6 +48,7 @@
             { name = "dopplerhq/cli/doppler"; trusted = true; }
             { name = "aws/tap/ec2-instance-selector"; trusted = true; }
             "etcd"
+            "eza"
             "fd"
             "fzf"
             "gh"
@@ -61,6 +68,7 @@
       	    "pyenv"
             "rg"
             "sesh"
+            {name = "seshagy"; trusted = true;}
             "stow"
             "tailscale"
             "tmux"
@@ -116,7 +124,7 @@
               "/Applications/Notion Calendar.app"
               "/Applications/Zen.app/"
               "/Applications/Ghostty.app"
-              "/Applications/1password.app"
+              "/Applications/Nix Apps/Proton Pass.app"
               "/Applications/Due.app"
             ];
             wvous-br-corner = 5; # Default bottom-right hot-corner -> start screen-saver

@@ -1,0 +1,54 @@
+[projects]
+roots = ["~/fp", "~/"]
+git_only = true
+depth = 1
+
+[layout]
+placement = "overlay"
+focus = "nvim"
+
+# [tabs.claude]
+# label = "claude"
+#
+# [[tabs.claude.panes]]
+# id = "editor"
+# title = "claude"
+# command = "claude"
+
+# [[tabs.claude.panes]]
+# id = "agent"
+# from = "editor"
+# title = "agent"
+# split = "right"
+# ratio = 0.3
+# command = "opencode"
+
+# [[tabs.claude.panes]]
+# id = "git"
+# from = "editor"
+# title = "lazygit"
+# split = "down"
+# command = "lazygit"
+
+[tabs.nvim]
+label = "nvim"
+
+[[tabs.nvim.panes]]
+id = "nvim"
+title = "nvim"
+command = "nvim ."
+
+[[tabs.nvim.panes]]
+id = "claude"
+from = "nvim"
+title = "claude"
+split = "right"
+ratio = 0.7
+command = "claude"
+
+[tabs.terminal]
+label = "terminal"
+
+[[tabs.terminal.panes]]
+id = "terminal"
+title = "term"

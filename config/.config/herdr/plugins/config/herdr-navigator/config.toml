@@ -1,0 +1,50 @@
+[picker]
+reuse_existing = true
+create_missing = true
+engine = "nucleo" # nucleo | skim | simple
+source_order = [
+  "workspace",
+  "root",
+  "quick",
+  "agent",
+  "zoxide",
+  "server",
+  # "plugin",
+  # "project",
+  # "session",
+]
+source_priority_boost = 5
+agent_sort = "herdr" # herdr | priority | spaces
+preview = true
+detailed_rows = true # source-aware Herdr-style result rows
+check_updates = true # daily background release check
+directory_template = "default.toml" # Herdr Plus project file
+directory_template_key = "ctrl+g" # what to press to use template
+vim_mode = false
+
+[notifications]
+enabled = true
+audio = false     # set true to enable sound
+sound = "default" # default | custom
+custom_sound = "" # Example: "~/sounds/navigator.wav"
+
+[sources]
+open_workspaces = true
+agents = true
+herdr_plus_projects = false
+herdr_plus_quick_actions = true
+sessions = true
+servers = true
+zoxide = true
+roots = true
+
+[[roots]]
+path = "~/fp"
+max_depth = 3
+
+[[roots]]
+path = "~/"
+max_depth = 1
+
+[theme]
+inherit_herdr = true
