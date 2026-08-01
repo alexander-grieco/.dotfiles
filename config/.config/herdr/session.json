@@ -17,7 +17,7 @@
         "54": 3,
         "53": 2
       },
-      "next_public_pane_number": 7,
+      "next_public_pane_number": 8,
       "public_tab_numbers": [
         1,
         2
@@ -39,10 +39,6 @@
             }
           },
           "panes": {
-            "54": {
-              "cwd": "/Users/alex/fp/theo-infra",
-              "label": "claude"
-            },
             "55": {
               "cwd": "/Users/alex/fp/theo-infra",
               "agent_session": {
@@ -51,6 +47,10 @@
                 "kind": "id",
                 "value": "0b4ca4a3-548b-45bd-9046-a722857165d1"
               }
+            },
+            "54": {
+              "cwd": "/Users/alex/fp/theo-infra",
+              "label": "claude"
             }
           },
           "zoomed": false,
@@ -75,13 +75,13 @@
       "active_tab": 0
     },
     {
-      "id": "w11",
+      "id": "w15",
       "custom_name": "dir: .dotfiles",
       "identity_cwd": "/Users/alex/.dotfiles",
       "public_pane_numbers": {
-        "62": 1,
-        "63": 2,
-        "64": 3
+        "80": 3,
+        "79": 2,
+        "78": 1
       },
       "next_public_pane_number": 4,
       "public_tab_numbers": [
@@ -97,46 +97,46 @@
               "direction": "Horizontal",
               "ratio": 0.7,
               "first": {
-                "Pane": 62
+                "Pane": 78
               },
               "second": {
-                "Pane": 64
+                "Pane": 80
               }
             }
           },
           "panes": {
-            "64": {
+            "78": {
+              "cwd": "/Users/alex/.dotfiles",
+              "label": "nvim"
+            },
+            "80": {
               "cwd": "/Users/alex/.dotfiles",
               "label": "claude",
               "agent_session": {
                 "source": "herdr:claude",
                 "agent": "claude",
                 "kind": "id",
-                "value": "7eb8a07b-f713-4de3-9c2e-e6b43f955c5b"
+                "value": "e58cad49-06b5-46b4-b03b-3ba79d5f070a"
               }
-            },
-            "62": {
-              "cwd": "/Users/alex/.dotfiles",
-              "label": "nvim"
             }
           },
           "zoomed": false,
-          "focused": 62,
-          "root_pane": 62
+          "focused": 78,
+          "root_pane": 78
         },
         {
           "custom_name": "term",
           "layout": {
-            "Pane": 63
+            "Pane": 79
           },
           "panes": {
-            "63": {
+            "79": {
               "cwd": "/Users/alex/.dotfiles"
             }
           },
           "zoomed": false,
-          "focused": 63,
-          "root_pane": 63
+          "focused": 79,
+          "root_pane": 79
         }
       ],
       "active_tab": 0

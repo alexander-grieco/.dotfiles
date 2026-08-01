@@ -23,6 +23,8 @@
 **/.claude/daemon/
 **/.claude/daemon.log
 **/.claude/jobs/
+**/.claude/hooks/
+**/.claude/teams/
 **/.claude/mcp-needs-auth-cache.json
 **/.claude/security/
 **/.claude/sessions/
@@ -34,3 +36,5 @@
 # Netovim
 **/nvim/lazy-lock.json
 nvim.log
+
+**.log
