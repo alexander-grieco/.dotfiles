@@ -41,6 +41,9 @@ eval "$(zoxide init zsh)"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# AWS Completions
+complete -C '/usr/local/bin/aws_completer' aws
+
 # pnpm
 export PNPM_HOME="/Users/alex/.local/share/pnpm"
 case ":$PATH:" in
