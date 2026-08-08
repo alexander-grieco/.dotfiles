@@ -61,6 +61,7 @@
             "lua"
             "luajit"
             "mas"
+            "mole"
             "neovim"
             "nmap"
             "node"

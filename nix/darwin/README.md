@@ -23,3 +23,12 @@ nix shell nixpkgs#stow
 # Command to Build Configuration After First Time
 
 `sudo darwin-rebuild switch --flake .#air`
+
+## Homebrew cleanup error
+
+If you get a clean up error you can run this to clear the local cache:
+
+```
+rm -rf ~/Library/Caches/Homebrew
+brew cleanup;
+```
