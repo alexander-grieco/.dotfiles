@@ -229,7 +229,7 @@
       "repo": "herdr-plus",
       "resolved_commit": "a9aca9da3ca6d7406f3d878a1df1c1b9775e2723",
       "managed_path": "/Users/alex/.config/herdr/plugins/github/cloudmanic.herdr-plus-0cce37b56fb9",
-      "installed_unix_ms": 1785442741343
+      "installed_unix_ms": 1786211339312
     }
   },
   {
@@ -307,7 +307,7 @@
   {
     "plugin_id": "herdr-navigator",
     "name": "Herdr Navigator",
-    "version": "0.3.3",
+    "version": "0.3.5",
     "min_herdr_version": "0.7.3",
     "description": "Jump to any Herdr workspace, agent, project, session, remote, directory, or action from one fuzzy navigator.",
     "manifest_path": "/Users/alex/.dotfiles/config/.config/herdr/plugins/github/herdr-navigator-3a5a6fa5dfb5/herdr-plugin.toml",
@@ -389,18 +389,18 @@
       "kind": "github",
       "owner": "thanhdat77",
       "repo": "herdr-navigator",
-      "requested_ref": "v0.3.4",
-      "resolved_commit": "ccacb217bccd509bd99c49c80fadd09f5cc3e354",
+      "requested_ref": "v0.3.5",
+      "resolved_commit": "745019ebdc38f9752629c93d2ca56d1ce638cf98",
       "managed_path": "/Users/alex/.config/herdr/plugins/github/herdr-navigator-3a5a6fa5dfb5",
-      "installed_unix_ms": 1785446333575
+      "installed_unix_ms": 1786211541819
     }
   },
   {
     "plugin_id": "sessionizer",
     "name": "Sessionizer",
-    "version": "0.6.2",
+    "version": "0.5.0",
     "min_herdr_version": "0.7.0",
-    "description": "Inspired by ThePrimeagen's tmux-sessionizer: fuzzy pickers to open projects and Git worktrees into Herdr workspaces.",
+    "description": "tmux-sessionizer for herdr: fzf over open workspaces and zoxide directories, create-or-focus with template tabs",
     "manifest_path": "/Users/alex/.dotfiles/config/.config/herdr/plugins/github/sessionizer-66e03d1ff740/herdr-plugin.toml",
     "plugin_root": "/Users/alex/.dotfiles/config/.config/herdr/plugins/github/sessionizer-66e03d1ff740",
     "enabled": true,
@@ -408,64 +408,43 @@
       "macos",
       "linux"
     ],
-    "build": [
-      {
-        "command": [
-          "bun",
-          "install",
-          "--frozen-lockfile"
-        ]
-      }
-    ],
     "actions": [
       {
-        "id": "open",
-        "title": "Open sessionizer",
+        "id": "agents",
+        "title": "Open agent view",
         "command": [
-          "bun",
-          "run",
-          "src/sessionizer/open-pane.ts"
+          "bash",
+          "bin/open-picker",
+          "--agents"
         ]
       },
       {
-        "id": "worktree-open",
-        "title": "Open worktree",
+        "id": "pick",
+        "title": "Open workspace picker",
         "command": [
-          "bun",
-          "run",
-          "src/worktree/open-worktree-pane.ts"
+          "bash",
+          "bin/open-picker"
         ]
       }
     ],
     "panes": [
       {
-        "id": "sessionizer",
+        "id": "picker",
         "title": "Sessionizer",
         "placement": "overlay",
         "command": [
-          "bun",
-          "run",
-          "src/sessionizer/sessionizer-pane.ts"
-        ]
-      },
-      {
-        "id": "worktree",
-        "title": "Worktree",
-        "placement": "overlay",
-        "command": [
-          "bun",
-          "run",
-          "src/worktree/worktree-pane.ts"
+          "bash",
+          "bin/sessionizer"
         ]
       }
     ],
     "source": {
       "kind": "github",
-      "owner": "andrewchng",
+      "owner": "salkhalil",
       "repo": "herdr-sessionizer",
-      "resolved_commit": "d3476681feb1c71689594779b1e65f55c97c7078",
+      "resolved_commit": "0ba66fafbee69628b7215566a94e7cdd02de4e0a",
       "managed_path": "/Users/alex/.config/herdr/plugins/github/sessionizer-66e03d1ff740",
-      "installed_unix_ms": 1785438522465
+      "installed_unix_ms": 1786211469992
     }
   }
 ]
