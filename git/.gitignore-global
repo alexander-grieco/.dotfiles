@@ -13,6 +13,7 @@
 **/.claude/tasks/
 **/.claude/plugins/cache/
 **/.claude/paste-cache/
+**/.claude/skills/
 **/.claude/file-history/
 **/.claude/plugins/
 **/.claude/stats-cache.json

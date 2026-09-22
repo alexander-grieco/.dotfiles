@@ -21,3 +21,11 @@ vim.api.nvim_create_user_command("InsertKustomizationConfig", function()
 end, {})
 
 vim.api.nvim_set_keymap("n", "<leader>ik", ":InsertKustomizationConfig<CR>", { noremap = true, silent = true })
+
+-- Default .tf files to use Terraform syntax highlighting
+-- can always run ":set filetype=terraform" to manually override if this doesn't work
+vim.filetype.add({
+  extension = {
+    tf = "terraform",
+  },
+})

@@ -34,6 +34,24 @@ function gse {
     dynamic-gitconfig.sh
 }
 
+function gbr() {
+  git for-each-ref --format='%(refname:short)' refs/heads |
+    while IFS= read -r branch; do
+      [[ "$branch" == "main" ]] ||
+      git worktree list --porcelain | grep -Fxq "branch refs/heads/$branch" ||
+      git branch -D -- "$branch"
+    done
+}
+
+function gbrp() {
+  git for-each-ref --format='%(refname:short)' refs/heads |
+    while IFS= read -r branch; do
+      [[ "$branch" == "main" ]] ||
+      git worktree list --porcelain | grep -Fxq "branch refs/heads/$branch" ||
+      echo "$branch"
+    done
+}
+
 # # I want to use this, but it doesn't work with autocomplete
 # function kubectl_prompt() {
 #     # Check if the command is being called for autocompletion

@@ -68,3 +68,5 @@ if [ -f '/Users/alex/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 
 # Weird ignore history workaround thing
 setopt HIST_IGNORE_SPACE
+
+. "$HOME/.local/share/../bin/env"
