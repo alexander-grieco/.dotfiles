@@ -46,5 +46,13 @@ max_depth = 3
 path = "~/"
 max_depth = 1
 
+[[roots]]
+path = "~/Nextcloud"
+max_depth = 3
+
+[[roots]]
+path = "~/Documents"
+max_depth = 3
+
 [theme]
 inherit_herdr = true

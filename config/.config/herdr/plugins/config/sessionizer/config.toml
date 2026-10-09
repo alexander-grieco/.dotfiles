@@ -1,5 +1,5 @@
 [projects]
-roots = ["~/fp", "~/"]
+roots = ["~/fp", "~/", "~/Nextcloud"]
 git_only = true
 depth = 1
 
@@ -44,7 +44,7 @@ from = "nvim"
 title = "claude"
 split = "right"
 ratio = 0.7
-command = "claude"
+command = "claude --dangerously-skip-permissions"
 
 [tabs.terminal]
 label = "terminal"
