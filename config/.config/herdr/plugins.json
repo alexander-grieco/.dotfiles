@@ -307,7 +307,7 @@
   {
     "plugin_id": "herdr-navigator",
     "name": "Herdr Navigator",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "min_herdr_version": "0.7.3",
     "description": "Jump to any Herdr workspace, agent, project, session, remote, directory, or action from one fuzzy navigator.",
     "manifest_path": "/Users/alex/.dotfiles/config/.config/herdr/plugins/github/herdr-navigator-3a5a6fa5dfb5/herdr-plugin.toml",
@@ -389,10 +389,10 @@
       "kind": "github",
       "owner": "thanhdat77",
       "repo": "herdr-navigator",
-      "requested_ref": "v0.3.5",
-      "resolved_commit": "745019ebdc38f9752629c93d2ca56d1ce638cf98",
+      "requested_ref": "v0.3.6",
+      "resolved_commit": "e12a97c5d9ddcd76ba18c985909ffeb4827afa6a",
       "managed_path": "/Users/alex/.config/herdr/plugins/github/herdr-navigator-3a5a6fa5dfb5",
-      "installed_unix_ms": 1786211541819
+      "installed_unix_ms": 1792450315598
     }
   },
   {

@@ -6,6 +6,21 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- MDX needs {/* */} comments; mini.comment otherwise picks <!-- --> from the markdown/html treesitter parsers
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown.mdx",
+  callback = function()
+    vim.b.minicomment_config = {
+      options = {
+        custom_commentstring = function()
+          return "{/* %s */}"
+        end,
+      },
+    }
+  end,
+})
+
 vim.api.nvim_create_autocmd("ExitPre", {
   pattern = "*",
   callback = function()

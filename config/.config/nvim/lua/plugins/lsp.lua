@@ -16,6 +16,9 @@ return {
           filetypes = { "html", "css", "astro" },
         },
         astro = {},
+        mdx_analyzer = {
+          filetypes = { "markdown.mdx" },
+        },
         rust_analyzer = {},
         tflint = {},
         jqls = {},
