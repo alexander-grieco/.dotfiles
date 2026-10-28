@@ -31,7 +31,6 @@
             "jesseduffield/lazygit"
 
             { name = "hashicorp/tap"; trusted = true; }
-            "dopplerhq/cli"
             { name = "danielfoehrkn/switch"; trusted = true; }
             { name = "typewhisper/tap"; trusted = true; }
             { name = "aws/tap"; trusted = true; }
@@ -45,7 +44,7 @@
             { name = "danielfoehrkn/switch/switch"; trusted = true; }
             "dlv"
             "docker"
-            { name = "dopplerhq/cli/doppler"; trusted = true; }
+            { name = "doppler"; trusted = true; }
             { name = "aws/tap/ec2-instance-selector"; trusted = true; }
             "etcd"
             "eza"
@@ -55,6 +54,8 @@
             "go"
             { name = "hashicorp/tap/terraform"; trusted = true; }
             { name = "jesseduffield/lazygit/lazygit"; trusted = true; }
+            "k9s"
+            "kubectl"
             "kubectx"
             "kustomize"
             "libsigc++"
@@ -86,6 +87,7 @@
             "dockdoor"
             "font-fira-code-nerd-font"
             "font-maple-mono"
+            "freelens"
             "gcloud-cli"
             "ghostty"
             "hyperkey"

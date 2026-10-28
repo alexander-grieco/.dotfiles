@@ -39,7 +39,11 @@ zoxide = true
 roots = true
 
 [[roots]]
-path = "~/fp"
+path = "~/fp-github"
+max_depth = 3
+
+[[roots]]
+path = "~/fp-gitlab"
 max_depth = 3
 
 [[roots]]

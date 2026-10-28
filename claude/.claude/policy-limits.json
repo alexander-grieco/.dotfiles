@@ -1,5 +1,8 @@
 {
   "restrictions": {
+    "allow_product_feedback": {
+      "allowed": false
+    },
     "allow_workflows": {
       "allowed": false
     },

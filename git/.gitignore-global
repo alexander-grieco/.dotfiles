@@ -28,7 +28,10 @@
 **/.claude/teams/
 **/.claude/mcp-needs-auth-cache.json
 **/.claude/security/
+**/.claude/state/
 **/.claude/sessions/
+**/.claude/policy-limits**
+**/.claude/remote-settings**
 
 /.claude
 
