@@ -9,17 +9,8 @@ fi
 
 # End Nix
 
-# Completions
-autoload -Uz compinit
-compinit
-
-autoload -U +X bashcompinit
-bashcompinit
-
-complete -C "$(command -v aws_completer)" aws
-# Completions end
-#
-# Apparently this needs to come after the completion config above
+# Completions: znap (sourced via downloads.zsh) runs compinit/bashcompinit
+# itself. Don't call compinit here or compdef calls after znap loads are dropped.
 [[ -f ~/.zsh/downloads.zsh ]] && source ~/.zsh/downloads.zsh
 [[ -f ~/.zsh/exports.zsh ]] && source ~/.zsh/exports.zsh
 [[ -f ~/.zsh/export-secret.zsh ]] && source ~/.zsh/export-secret.zsh

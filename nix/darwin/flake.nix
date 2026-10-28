@@ -174,6 +174,9 @@
 
       # Create /etc/zshrc that loads the nix-darwin environment.
       programs.zsh.enable = true;  # default shell on catalina
+      # znap runs compinit itself; an earlier compinit breaks its deferred compdef
+      programs.zsh.enableCompletion = false;
+      programs.zsh.enableBashCompletion = false;
       # programs.fish.enable = true;
 
       # Set Git commit hash for darwin-version.
