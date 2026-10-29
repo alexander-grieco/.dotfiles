@@ -1,3 +1,6 @@
+# Tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 # AWS
 alias arpt="aws rds describe-db-proxies --query 'sort_by(DBProxies, &DBProxyName)[].{name:DBProxyName,endpoint:Endpoint,status:Status}' --output table"
 
