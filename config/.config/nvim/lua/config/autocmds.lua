@@ -21,6 +21,13 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Truncate the LSP log once it gets large so it never needs manual cleanup
+local lsp_log = vim.lsp.log.get_filename()
+local lsp_log_stat = vim.uv.fs_stat(lsp_log)
+if lsp_log_stat and lsp_log_stat.size > 100 * 1024 * 1024 then
+  io.open(lsp_log, "w"):close()
+end
+
 vim.api.nvim_create_autocmd("ExitPre", {
   pattern = "*",
   callback = function()

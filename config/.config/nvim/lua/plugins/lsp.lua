@@ -26,6 +26,8 @@ return {
         zls = {},
         yamlls = {},
         terraformls = {
+          -- terraform-ls logs every RPC message to stderr, which nvim writes to lsp.log (GBs per week)
+          cmd = { "terraform-ls", "serve", "-log-file=/dev/null" },
           settings = {
             -- needed when .terraform is not in root of repo you are opening?
             -- it just helps avoid an error message and with terraformls not attaching

@@ -35,6 +35,7 @@
             { name = "typewhisper/tap"; trusted = true; }
             { name = "aws/tap"; trusted = true; }
             {name = "lmilojevicc/tap"; trusted = true;}
+            {name = "skyhook-io/tap"; trusted = true;}
           ];
 
           brews = [
@@ -68,6 +69,7 @@
             "node"
             "pi-coding-agent"
       	    "pyenv"
+            "radar"
             "rg"
             "sesh"
             {name = "seshagy"; trusted = true;}
