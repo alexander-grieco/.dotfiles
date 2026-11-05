@@ -54,7 +54,8 @@
             "gh"
             "go"
             { name = "hashicorp/tap/terraform"; trusted = true; }
-            { name = "jesseduffield/lazygit/lazygit"; trusted = true; }
+            { name = "lazygit"; trusted = true; }
+            "helm"
             "k9s"
             "kubectl"
             "kubectx"
