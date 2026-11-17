@@ -1,0 +1,67 @@
+{
+  "sessions": {
+    "aad94a15-dcec-484e-827b-3a0015335fe0": {
+      "tool_counts": {
+        "Bash": 4,
+        "AskUserQuestion": 1
+      },
+      "last_tool": "Bash",
+      "total_calls": 5,
+      "started_at": 1794508010,
+      "updated_at": 1794508050
+    },
+    "094c6784-4776-4d3c-8010-ff21cdb02ea1": {
+      "tool_counts": {
+        "Bash": 6,
+        "Write": 1
+      },
+      "last_tool": "Bash",
+      "total_calls": 7,
+      "started_at": 1794508167,
+      "updated_at": 1794508288
+    },
+    "eff25794-0b29-4cd0-8427-5bbc51c06387": {
+      "tool_counts": {
+        "Bash": 89,
+        "Write": 3,
+        "Read": 6,
+        "Edit": 3
+      },
+      "last_tool": "Bash",
+      "total_calls": 101,
+      "started_at": 1794587818,
+      "updated_at": 1794950336
+    },
+    "f7b7282c-451a-4ede-a1c5-f6eb8d0bd0e2": {
+      "tool_counts": {
+        "Bash": 6,
+        "Read": 1
+      },
+      "last_tool": "Bash",
+      "total_calls": 7,
+      "started_at": 1794936470,
+      "updated_at": 1794936499
+    },
+    "e12ba7d8-1816-45d5-89bb-e2b3921243f1": {
+      "tool_counts": {
+        "Bash": 2
+      },
+      "last_tool": "Bash",
+      "total_calls": 2,
+      "started_at": 1794936573,
+      "updated_at": 1794936576
+    },
+    "411c7122-7af0-437a-ab74-57515cda728e": {
+      "tool_counts": {
+        "Bash": 21,
+        "Read": 1,
+        "AskUserQuestion": 1,
+        "Write": 1
+      },
+      "last_tool": "Bash",
+      "total_calls": 24,
+      "started_at": 1794936622,
+      "updated_at": 1794938460
+    }
+  }
+}

@@ -52,6 +52,7 @@
             "fd"
             "fzf"
             "gh"
+            "glab"
             "go"
             { name = "hashicorp/tap/terraform"; trusted = true; }
             { name = "lazygit"; trusted = true; }

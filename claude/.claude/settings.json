@@ -253,14 +253,24 @@
     "kaaos@dapper-claude-code-plugins": true,
     "lua-lsp@claude-plugins-official": true,
     "metaclaude@dapper-claude-code-plugins": true,
-    "oh-my-claudecode@omc": true,
     "plugin-dev@claude-plugins-official": true,
     "product@dapper-claude-code-plugins": true,
     "ralph-loop@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "socrates-product-advisor@dapper-claude-code-plugins": true,
     "superpowers@claude-plugins-official": true,
-    "aws-core@claude-plugins-official": true
+    "aws-core@claude-plugins-official": true,
+    "gitlab@claude-plugins-official": true,
+    "claude-security@anthropic-plugin-directory": true,
+    "oh-my-claudecode@omc": true
+  },
+  "extraKnownMarketplaces": {
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    }
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
