@@ -4,9 +4,9 @@
 [include]
 	path = ~/.gitconfig_dynamic
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+	pushInsteadOf = https://github.com/
 [url "git@gitlab.com:"]
-	insteadOf = https://gitlab.com/
+	pushInsteadOf = https://gitlab.com/
 [checkout]
 	defaultBare = false
 [color "status"]
