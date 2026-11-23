@@ -9,3 +9,8 @@
 # Ignore zinit things
 **.zwc
 **webi
+
+# herdr: plugin clones (managed by herdr) + runtime state
+config/.config/herdr/plugins/github/
+config/.config/herdr/plugins/config/herdr-navigator/jump-back-workspace
+config/.config/herdr/plugins/config/herdr-navigator/update-check

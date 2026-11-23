@@ -32,6 +32,12 @@
 **/.claude/sessions/
 **/.claude/policy-limits**
 **/.claude/remote-settings**
+**/.claude/settings.local.json
+**/.claude/*.bak
+**/.claude/*.backup*
+**/.claude/downloads/
+**/.claude/session-env/
+**/.claude/plans/
 
 /.claude
 
