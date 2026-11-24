@@ -10,7 +10,11 @@
 **.zwc
 **webi
 
-# herdr: plugin clones (managed by herdr) + runtime state
+# Herdr
+# plugin clones (managed by herdr)
 config/.config/herdr/plugins/github/
+# runtime state
+config/.config/herdr/session.json
+config/.config/herdr/*.log
 config/.config/herdr/plugins/config/herdr-navigator/jump-back-workspace
 config/.config/herdr/plugins/config/herdr-navigator/update-check
