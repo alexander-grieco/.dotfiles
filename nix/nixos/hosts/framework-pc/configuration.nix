@@ -13,6 +13,7 @@
     ../../modules/neovim.nix
     ../../modules/shell.nix
     ../../modules/dotfiles.nix
+    ../../modules/swap.nix
   ];
 
   networking.hostName = "framework-pc";
