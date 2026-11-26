@@ -14,6 +14,7 @@
     ../../modules/shell.nix
     ../../modules/dotfiles.nix
     ../../modules/swap.nix
+    ../../modules/vault.nix
   ];
 
   networking.hostName = "framework-pc";

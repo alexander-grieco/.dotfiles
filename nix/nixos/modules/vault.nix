@@ -2,7 +2,7 @@
 
 let
   user = "alex";
-  vaultAddr = "https://vault.tail50ac.ts.net";
+  vaultAddr = "http://127.0.0.1:8200";
 
   policyDir = ./vault-policies;
 

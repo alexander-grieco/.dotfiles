@@ -14,6 +14,12 @@
     promptInit = "";
   };
 
+  # Install fzf
+  programs.fzf = {
+    keybindings = true;
+    fuzzyCompletion = true;
+  };
+
   users.users.alex.shell = pkgs.zsh;
 
   # # fzf's Ctrl-R / Ctrl-T / Alt-C bindings and ** completion. Replaces the
