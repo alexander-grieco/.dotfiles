@@ -4,11 +4,13 @@
 
 {
   environment.systemPackages = with pkgs; [
-    go # also lets Mason build Go-based tools (gopls, etc.)
+    go
+    cargo
+    rustc
 
     # Inspecting data and APIs
-    jq # JSON (Caddy admin API, Tailscale/Vault output)
-    yq-go # YAML (compose files)
+    jq
+    yq-go # YAML
 
     # Networking
     dnsutils # dig, nslookup
